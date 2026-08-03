@@ -367,6 +367,12 @@ img, video, svg {
     animation: mobileBeforeAfter 4s ease-in-out infinite alternate !important;
   }
 
+  .hero {
+    min-height: 100svh !important;
+    height: 100svh !important;
+    overflow: hidden !important;
+  }
+
   /* Prevent any long medical term or title from ever overflowing the screen */
   h1, h2, h3, h4, .font-serif {
     word-wrap: break-word !important;
