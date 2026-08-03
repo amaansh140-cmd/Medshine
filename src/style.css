@@ -483,6 +483,12 @@ img, video, svg {
   .hero .reveal-layer .background {
     background-image: url('/src/assets/dr_priya_mobile_bg.jpg') !important;
   }
+
+  /* Hide the broken WhatsApp link on mobile */
+  a[aria-label="Chat on WhatsApp"],
+  a[href^="https://wa.me/"] {
+    display: none !important;
+  }
 }
 
 /* =========================================
@@ -623,4 +629,35 @@ img, video, svg {
 @keyframes mobileBeforeAfter {
   0%, 30% { opacity: 0; }
   70%, 100% { opacity: 1; }
+}
+
+/* Floating WhatsApp Button (Desktop) */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  background-color: #25D366;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px 0 rgba(37,211,102,0.39);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37,211,102,0.23);
+}
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+.whatsapp-float span {
+  display: none; /* Hide tooltip for simplicity */
 }
