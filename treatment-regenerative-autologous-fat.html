@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diabetes Mellitus - Dr Priya Jain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: '#ffffff',
+              creamdeep: '#fafafa',
+              ink: '#1a1a1a',
+              inkmute: '#666666',
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      ::selection { background-color: #1a1a1a; color: #ffffff; }
+      body { background-color: #ffffff; color: #1a1a1a; }
+      .scroll-reveal-layer ::selection { background-color: #ffffff; color: #1a1a1a; }
+    </style>
+  </head>
+  <body class="font-sans antialiased selection:bg-ink selection:text-cream">
+
+    <svg class="svg-defs" style="position: absolute; width: 0; height: 0;">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 25 -10" result="goo" />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+        <mask id="blob-mask">
+          <rect width="100%" height="100%" fill="black" />
+          <g filter="url(#goo)" fill="white" id="mask-group"></g>
+        </mask>
+      </defs>
+    </svg>
+
+    <!-- Sticky Nav -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cream/85 backdrop-blur-md border-b border-ink/10">
+      <div class="max-w-[1240px] mx-auto px-6 md:px-10 h-[68px] flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 reveal-anim">
+          <div class="w-7 h-7 rounded-full bg-ink flex items-center justify-center text-cream">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm43.81,68.19-28.28,66a8,8,0,0,1-3.72,3.72l-66,28.28a8,8,0,0,1-10.36-10.36l28.28-66a8,8,0,0,1,3.72-3.72l66-28.28A8,8,0,0,1,171.81,92.19ZM128,112a16,16,0,1,0,16,16A16,16,0,0,0,128,112Z"></path></svg>
+          </div>
+          <span class="font-serif font-semibold tracking-tight text-xl text-ink">Medshine</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm text-inkmute">
+          <a href="index.html" class="hover:text-ink transition-colors reveal-anim">Home</a>
+          <a href="about.html" class="hover:text-ink transition-colors reveal-anim">About</a>
+          <a href="treatments.html" class="hover:text-ink transition-colors reveal-anim">Treatments</a>
+          <a href="blog.html" class="hover:text-ink transition-colors">Blog</a>
+<a href="contact.html" class="hover:text-ink transition-colors reveal-anim">Contact</a>
+        </div>
+        <a href="contact.html" class="bg-ink text-cream px-5 py-2 rounded-full text-[13.5px] hover:bg-black transition-colors hover-scale reveal-anim">
+          Book Consultation
+        </a>
+      </div>
+    </nav>
+
+    <div class="scroll-page-wrapper">
+      <!-- BASE LAYER -->
+      <div class="scroll-base-layer layer base-layer">
+        
+        <section class="max-w-[800px] mx-auto px-6 md:px-10 pt-32 pb-32 min-h-[70vh]">
+          <a href="treatment-regenerative.html" class="inline-flex items-center gap-2 text-inkmute hover:text-ink transition-colors mb-10 text-sm font-medium reveal-anim">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+            Back to Regenerative Medicines
+          </a>
+          <div class="flex items-center gap-4 mb-8">
+            <span class="text-ink uppercase text-xs tracking-[0.28em] font-semibold reveal-anim">Regenerative Medicines</span>
+            <div class="flex-1 h-px bg-ink/15 reveal-anim"></div>
+          </div>
+          <h1 class="font-serif font-medium leading-[0.95] tracking-tight text-ink mb-10 reveal-anim" style="font-size: clamp(2.4rem, 5vw, 4.2rem);">
+            Autologous fat grafting (nanofat/microfat)
+          </h1>
+          
+          <p class="text-[17px] md:text-[19px] text-inkmute leading-relaxed font-light reveal-anim">
+            Uses the patient's own fat, which contains regenerative cells and growth factors, for selected reconstructive and aesthetic indications.
+          </p>
+          <div class="mt-10 reveal-anim">
+            <a href="contact.html" class="inline-flex items-center justify-center bg-ink text-cream px-8 py-4 rounded-full font-medium hover:bg-black transition-colors hover-scale">
+              Book Appointment
+            </a>
+          </div>
+
+        </section>
+
+      </div>
+
+      <!-- REVEAL LAYER -->
+      <div class="scroll-reveal-layer layer reveal-layer bg-ink" id="reveal-layer" aria-hidden="true">
+        
+        <section class="max-w-[800px] mx-auto px-6 md:px-10 pt-32 pb-32 min-h-[70vh]">
+          <a href="treatment-regenerative.html" class="inline-flex items-center gap-2 text-cream/70 hover:text-cream transition-colors mb-10 text-sm font-medium reveal-anim">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+            Back to Regenerative Medicines
+          </a>
+          <div class="flex items-center gap-4 mb-8">
+            <span class="text-cream uppercase text-xs tracking-[0.28em] font-semibold reveal-anim">Regenerative Medicines</span>
+            <div class="flex-1 h-px bg-cream/15 reveal-anim"></div>
+          </div>
+          <h1 class="font-serif font-medium leading-[0.95] tracking-tight text-cream mb-10 reveal-anim" style="font-size: clamp(2.4rem, 5vw, 4.2rem);">
+            Autologous fat grafting (nanofat/microfat)
+          </h1>
+          
+          <p class="text-[17px] md:text-[19px] text-cream/70 leading-relaxed font-light reveal-anim">
+            Uses the patient's own fat, which contains regenerative cells and growth factors, for selected reconstructive and aesthetic indications.
+          </p>
+          <div class="mt-10 reveal-anim">
+            <a href="contact.html" class="inline-flex items-center justify-center bg-cream text-ink px-8 py-4 rounded-full font-medium hover:bg-white transition-colors hover-scale">
+              Book Appointment
+            </a>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/transition.js"></script>
+    <script type="module" src="/src/animations.js"></script>
+  
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917506251933" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 448 512">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+      </svg>
+      <!-- Tooltip -->
+      <span class="absolute right-full mr-4 bg-ink text-cream text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-sans">
+        Chat with us
+      </span>
+    </a>
+  </body>
+
+</html>
