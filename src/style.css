@@ -354,7 +354,18 @@ img, video, svg {
    Mobile Optimization (max-width: 768px)
    ========================================= */
 @media (max-width: 768px) {
+  /* Disable SVG blob mask on mobile and replace with a smooth crossfade effect */
+  .scroll-reveal-layer,
+  .svg-defs {
+    display: none !important;
+  }
 
+  .hero .reveal-layer {
+    display: block !important;
+    -webkit-mask: none !important;
+    mask: none !important;
+    animation: mobileBeforeAfter 4s ease-in-out infinite alternate !important;
+  }
 
   /* Prevent any long medical term or title from ever overflowing the screen */
   h1, h2, h3, h4, .font-serif {
