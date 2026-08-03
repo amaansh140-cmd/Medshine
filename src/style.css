@@ -25,7 +25,13 @@ body {
 .hero {
   position: relative;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 70vh; /* Reduced from 100vh for better mobile aspect ratio */
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 100vh;
+  }
 }
 
 /* Layers */
