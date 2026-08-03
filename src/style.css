@@ -475,6 +475,14 @@ img, video, svg {
   [class*="rounded-[28px]"], [class*="rounded-[32px]"] {
     border-radius: 20px !important;
   }
+
+  /* Override homepage hero backgrounds with mobile portrait image */
+  .hero .base-layer .background {
+    background-image: url('/src/assets/dr_priya_mobile_bg.jpg') !important;
+  }
+  .hero .reveal-layer .background {
+    background-image: url('/src/assets/dr_priya_mobile_bg.jpg') !important;
+  }
 }
 
 /* =========================================
