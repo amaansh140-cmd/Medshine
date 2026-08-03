@@ -624,16 +624,19 @@ img, video, svg {
   transform: translateX(6px);
 }
 
-@keyframes mobileBeforeAfter {
-  0%, 30% { opacity: 0; }
-  70%, 100% { opacity: 1; }
-}
-
-/* Use portrait image for mobile hero to prevent blurring from scaling */
+/* On mobile, completely disable the reveal animation and grayscale to prevent hardware-acceleration blur */
 @media (max-width: 768px) {
+  .hero .reveal-layer {
+    animation: none !important;
+    opacity: 1 !important;
+    -webkit-mask: none !important;
+    mask: none !important;
+  }
+  
   .base-layer .background,
   .reveal-layer .background {
     background-image: url('/src/assets/dr_priya_portrait_pink.jpg') !important;
+    filter: none !important;
   }
 }
 
