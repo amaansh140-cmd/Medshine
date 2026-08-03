@@ -626,6 +626,12 @@ img, video, svg {
 
 /* On mobile, completely disable the reveal animation and grayscale to prevent hardware-acceleration blur */
 @media (max-width: 768px) {
+  .hero {
+    min-height: 100svh !important;
+    height: 100svh !important;
+    overflow: hidden;
+  }
+  
   .hero .reveal-layer {
     animation: none !important;
     opacity: 1 !important;
@@ -637,6 +643,8 @@ img, video, svg {
   .reveal-layer .background {
     background-image: url('/src/assets/dr_priya_portrait_pink.jpg') !important;
     filter: none !important;
+    background-size: 100% 100% !important; /* Force fit to screen ratio exactly */
+    background-position: top center !important;
   }
 }
 
