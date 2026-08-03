@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Ankur Jain - Internal Medicine & Critical Care Specialist | Medshine Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: '#ffffff',
+              creamdeep: '#fafafa',
+              ink: '#1a1a1a',
+              inkmute: '#666666',
+              magenta: '#111111', 
+              magentadeep: '#000000',
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      ::selection { background-color: #1a1a1a; color: #ffffff; }
+      body { background-color: #ffffff; color: #1a1a1a; }
+      
+      .grid-texture {
+        background-image: linear-gradient(to right, rgba(26,26,26,0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(26,26,26,0.05) 1px, transparent 1px);
+        background-size: 54px 54px;
+      }
+      .grid-texture-light {
+        background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+        background-size: 60px 60px;
+      }
+      .hover-row { transition: transform 0.35s ease; }
+      .hover-row:hover { transform: translateX(-14px); }
+      
+      .scroll-reveal-layer ::selection { background-color: #ffffff; color: #1a1a1a; }
+    </style>
+  </head>
+  <body class="font-sans antialiased selection:bg-ink selection:text-cream">
+
+    <!-- SVG Defs for Mask and Gooey Filter -->
+    <svg class="svg-defs" style="position: absolute; width: 0; height: 0;">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 25 -10" result="goo" />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+        <mask id="blob-mask">
+          <rect width="100%" height="100%" fill="black" />
+          <g filter="url(#goo)" fill="white" id="mask-group">
+            <!-- Circles will be injected here by JS -->
+          </g>
+        </mask>
+      </defs>
+    </svg>
+    
+    <!-- Sticky Nav -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cream/85 backdrop-blur-md border-b border-ink/10">
+      <div class="max-w-[1240px] mx-auto px-6 md:px-10 h-[68px] flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-ink flex items-center justify-center text-cream">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm43.81,68.19-28.28,66a8,8,0,0,1-3.72,3.72l-66,28.28a8,8,0,0,1-10.36-10.36l28.28-66a8,8,0,0,1,3.72-3.72l66-28.28A8,8,0,0,1,171.81,92.19ZM128,112a16,16,0,1,0,16,16A16,16,0,0,0,128,112Z" class="reveal-anim"></path></svg>
+          </div>
+          <span class="font-serif font-semibold tracking-tight text-xl text-ink">Medshine</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm text-inkmute">
+          <a href="index.html" class="hover:text-ink transition-colors">Home</a>
+          <a href="about.html" class="hover:text-ink transition-colors">About Us</a>
+          <a href="treatments.html" class="hover:text-ink transition-colors">Treatments</a>
+          <a href="blog.html" class="hover:text-ink transition-colors">Blog</a>
+          <a href="contact.html" class="hover:text-ink transition-colors">Contact</a>
+        </div>
+        <a href="contact.html" class="bg-ink text-cream px-5 py-2 rounded-full text-[13.5px] hover:bg-magentadeep transition-colors hover-scale">
+          Book Consultation
+        </a>
+      </div>
+    </nav>
+
+    <div class="scroll-page-wrapper">
+      
+      <!-- ================= BASE LAYER (LIGHT) ================= -->
+      <div class="scroll-base-layer layer base-layer">
+        
+        <!-- Doctor Hero Section -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 pt-32 pb-20">
+          <div class="flex items-center gap-4 mb-8">
+            <a href="about.html" class="text-inkmute hover:text-ink uppercase text-xs tracking-[0.28em] font-semibold transition-colors">← Back to Doctors</a>
+            <div class="flex-1 h-px bg-ink/15"></div>
+            <span class="text-inkmute text-sm">Internal Medicine & Critical Care Specialist</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-5">
+              <div class="relative rounded-[32px] overflow-hidden aspect-[4/5] bg-ink/5 border border-ink/10 shadow-xl">
+                <img src="/public/dr_ankur_portrait.jpg" alt="Dr. Ankur Jain" class="w-full h-full object-cover object-top grayscale contrast-105">
+                <div class="absolute bottom-4 left-4 right-4 bg-cream/90 backdrop-blur-md p-4 rounded-2xl border border-ink/10">
+                  <span class="text-xs uppercase tracking-widest text-ink font-semibold block">M.B.B.S, M.D</span>
+                  <span class="text-xs text-inkmute">Intensivist & General Physician</span>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-7">
+              <span class="text-magenta uppercase text-xs tracking-[0.28em] font-semibold block mb-4">Senior Medical Specialist Profile</span>
+              <h1 class="font-serif font-medium leading-[0.98] tracking-tight text-ink mb-6 reveal-anim" style="font-size: clamp(2.8rem, 6.5vw, 5.2rem);">
+                Dr. <em class="font-light italic text-inkmute">Ankur Jain</em>
+              </h1>
+              <p class="text-ink text-lg md:text-xl font-serif italic mb-8 leading-relaxed max-w-[36ch] border-l-2 border-ink/20 pl-6">
+                "Comprehensive medical care requires precision across every organ system—from acute critical intensive care to chronic cardiovascular, diabetic, and rheumatological management."
+              </p>
+              <p class="text-inkmute text-[16px] leading-relaxed mb-8 max-w-[48ch]">
+                Dr. Ankur Jain is a premier specialist in Internal Medicine, General Physician care, and Critical Care (Intensivist). Bringing profound clinical expertise in Cardiology, Diabetology, and Rheumatology to Medshine Clinic, he spearheads acute medical stabilization, complex multi-system diagnostics, and long-term preventative health optimization.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a href="contact.html" class="bg-ink text-cream px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider hover:bg-magenta transition-all hover-scale">
+                  Book with Dr. Ankur
+                </a>
+                <a href="#specialties" class="border border-ink/20 text-ink px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider hover:bg-ink/5 transition-all">
+                  View Specialties
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Biography & Credentials Grid -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-28 border-t border-ink/15 pt-20">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="border-l border-ink/15 pl-8">
+              <span class="font-serif text-3xl text-ink font-medium block mb-3">Intensivist Specialist</span>
+              <p class="text-inkmute text-sm leading-relaxed">
+                Expert in Critical Care and emergency stabilization, managing hemodynamic monitoring, acute organ support, and complex inpatient intensive medical protocols with unwavering precision.
+              </p>
+            </div>
+            <div class="border-l border-ink/15 pl-8">
+              <span class="font-serif text-3xl text-ink font-medium block mb-3">Cardio & Diabetology</span>
+              <p class="text-inkmute text-sm leading-relaxed">
+                Spearheads advanced preventative care and management for cardiovascular disorders, hypertension, insulin resistance, metabolic syndrome, and Type 1/Type 2 diabetes.
+              </p>
+            </div>
+            <div class="border-l border-ink/15 pl-8">
+              <span class="font-serif text-3xl text-ink font-medium block mb-3">Rheumatology Expert</span>
+              <p class="text-inkmute text-sm leading-relaxed">
+                Specialized in diagnosing and treating chronic inflammatory disorders, autoimmune conditions, rheumatoid arthritis, gout, and systemic connective tissue diseases.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Specialties & Procedures -->
+        <section id="specialties" class="max-w-[1240px] mx-auto px-6 md:px-10 mb-28 scroll-mt-24">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6 border-b border-ink/15 pb-8">
+            <div>
+              <span class="text-magenta uppercase text-xs tracking-[0.28em] font-semibold block mb-4">Areas of Clinical Focus</span>
+              <h2 class="font-serif font-medium text-ink leading-none tracking-tight reveal-anim" style="font-size: clamp(2.2rem, 5vw, 4rem);">
+                Specialized <em class="font-light italic text-inkmute">Expertise</em>
+              </h2>
+            </div>
+            <p class="text-inkmute text-sm max-w-[34ch]">
+              Dr. Ankur Jain personally leads clinical evaluation, acute stabilization, and preventative protocols across these primary domains.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="border border-ink/10 rounded-[24px] p-8 bg-ink/5 hover:border-ink/30 transition-all">
+              <span class="text-xs font-semibold uppercase tracking-widest text-inkmute block mb-3">01 / Internal Medicine</span>
+              <h3 class="font-serif text-2xl font-semibold text-ink mb-3">General Physician & Internal Medicine</h3>
+              <p class="text-inkmute text-sm leading-relaxed mb-6">
+                Comprehensive diagnostic evaluation and outpatient/inpatient management of complex adult illnesses, multi-organ disorders, and chronic disease prevention.
+              </p>
+              <ul class="text-xs text-ink space-y-2 font-medium">
+                <li>• Comprehensive Adult Health & Diagnostic Profiling</li>
+                <li>• Chronic & Acute Infectious Disease Management</li>
+                <li>• Evidence-Based Preventative Medicine & Screening</li>
+              </ul>
+            </div>
+
+            <div class="border border-ink/10 rounded-[24px] p-8 bg-ink/5 hover:border-ink/30 transition-all">
+              <span class="text-xs font-semibold uppercase tracking-widest text-inkmute block mb-3">02 / Critical Care</span>
+              <h3 class="font-serif text-2xl font-semibold text-ink mb-3">Critical Care (Intensivist) Services</h3>
+              <p class="text-inkmute text-sm leading-relaxed mb-6">
+                Specialized ICU level management for acute life-threatening medical emergencies, respiratory compromise, hemodynamic instability, and severe metabolic crises.
+              </p>
+              <ul class="text-xs text-ink space-y-2 font-medium">
+                <li>• Intensive Care & Hemodynamic Monitoring</li>
+                <li>• Pre-Operative Assessment & Post-Op Stabilization</li>
+                <li>• Advanced Emergency Life Support Protocols</li>
+              </ul>
+            </div>
+
+            <div class="border border-ink/10 rounded-[24px] p-8 bg-ink/5 hover:border-ink/30 transition-all">
+              <span class="text-xs font-semibold uppercase tracking-widest text-inkmute block mb-3">03 / Cardio-Metabolic Care</span>
+              <h3 class="font-serif text-2xl font-semibold text-ink mb-3">Cardiology & Diabetology</h3>
+              <p class="text-inkmute text-sm leading-relaxed mb-6">
+                Targeted management of cardiovascular risk factors, hypertension, hyperlipidemia, and blood glucose optimization to protect long-term vital vascular health.
+              </p>
+              <ul class="text-xs text-ink space-y-2 font-medium">
+                <li>• Type 1, Type 2 & Gestational Diabetes Management</li>
+                <li>• Hypertension & Lipid Profile Correction</li>
+                <li>• Non-Invasive Cardiac Risk & Vascular Screening</li>
+              </ul>
+            </div>
+
+            <div class="border border-ink/10 rounded-[24px] p-8 bg-ink/5 hover:border-ink/30 transition-all">
+              <span class="text-xs font-semibold uppercase tracking-widest text-inkmute block mb-3">04 / Rheumatology</span>
+              <h3 class="font-serif text-2xl font-semibold text-ink mb-3">Rheumatology & Autoimmune Care</h3>
+              <p class="text-inkmute text-sm leading-relaxed mb-6">
+                Specialized diagnosis and targeted biologic/medical therapy for systemic inflammatory conditions, autoimmune disorders, and joint preservation.
+              </p>
+              <ul class="text-xs text-ink space-y-2 font-medium">
+                <li>• Rheumatoid Arthritis, Gout & Lupus Management</li>
+                <li>• Chronic Inflammation & Joint Pain Protocols</li>
+                <li>• Autoimmune & Systemic Connective Tissue Diagnostics</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA Band -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-16">
+          <div class="bg-ink text-cream rounded-[28px] p-10 md:p-20 relative overflow-hidden">
+            <div class="absolute inset-0 grid-texture-light"></div>
+            <div class="relative z-10">
+              <span class="text-cream/75 uppercase text-xs tracking-[0.28em] font-semibold block mb-8">Personalized Consultation</span>
+              <h2 class="font-serif font-medium leading-[0.98] tracking-tight mb-12 max-w-[18ch] reveal-anim" style="font-size: clamp(2.4rem, 6vw, 5.2rem);">
+                Ready to schedule your consultation with <em class="font-light italic text-cream/90">Dr. Ankur Jain?</em>
+              </h2>
+              <div class="flex flex-wrap items-center gap-4">
+                <a href="contact.html" class="bg-cream text-ink px-8 py-4 rounded-full font-medium hover:bg-transparent hover:text-cream hover:ring-1 hover:ring-cream transition-all hover-scale">
+                  Book your appointment
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-ink text-cream">
+          <div class="max-w-[1240px] mx-auto px-6 md:px-10 pt-20 pb-10">
+            <div class="border-t border-cream/12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+              <div class="text-cream/45 text-xs">&copy; 2026 Medshine Clinic. All rights reserved.</div>
+            </div>
+          </div>
+        </footer>
+
+      </div> <!-- End Base Layer -->
+
+      <!-- ================= REVEAL LAYER (DARK MODE) ================= -->
+      <div class="scroll-reveal-layer layer reveal-layer bg-ink" id="reveal-layer" aria-hidden="true">
+        
+        <!-- Doctor Hero Section (Dark) -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 pt-32 pb-20">
+          <div class="flex items-center gap-4 mb-8">
+            <span class="text-cream uppercase text-xs tracking-[0.28em] font-semibold">← Back to Doctors</span>
+            <div class="flex-1 h-px bg-cream/15"></div>
+            <span class="text-cream/70 text-sm">Internal Medicine & Critical Care Specialist</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-5">
+              <div class="relative rounded-[32px] overflow-hidden aspect-[4/5] bg-white/5 border border-cream/10 shadow-xl">
+                <img src="/public/dr_ankur_portrait.jpg" alt="Dr. Ankur Jain" class="w-full h-full object-cover object-top">
+                <div class="absolute bottom-4 left-4 right-4 bg-ink/90 backdrop-blur-md p-4 rounded-2xl border border-cream/10">
+                  <span class="text-xs uppercase tracking-widest text-cream font-semibold block">M.B.B.S, M.D</span>
+                  <span class="text-xs text-cream/70">Intensivist & General Physician</span>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-7">
+              <span class="text-cream uppercase text-xs tracking-[0.28em] font-semibold block mb-4">Senior Medical Specialist Profile</span>
+              <h1 class="font-serif font-medium leading-[0.98] tracking-tight text-cream mb-6 reveal-anim" style="font-size: clamp(2.8rem, 6.5vw, 5.2rem);">
+                Dr. <em class="font-light italic text-cream/70">Ankur Jain</em>
+              </h1>
+              <p class="text-cream text-lg md:text-xl font-serif italic mb-8 leading-relaxed max-w-[36ch] border-l-2 border-cream/20 pl-6">
+                "Comprehensive medical care requires precision across every organ system—from acute critical intensive care to chronic cardiovascular, diabetic, and rheumatological management."
+              </p>
+              <p class="text-cream/70 text-[16px] leading-relaxed mb-8 max-w-[48ch]">
+                Dr. Ankur Jain is a premier specialist in Internal Medicine, General Physician care, and Critical Care (Intensivist). Bringing profound clinical expertise in Cardiology, Diabetology, and Rheumatology to Medshine Clinic, he spearheads acute medical stabilization, complex multi-system diagnostics, and long-term preventative health optimization.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a href="contact.html" class="bg-cream text-ink px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider hover:bg-emerald-400 transition-all hover-scale">
+                  Book with Dr. Ankur
+                </a>
+                <a href="#specialties" class="border border-cream/20 text-cream px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider hover:bg-white/5 transition-all">
+                  View Specialties
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Biography & Credentials Grid (Dark) -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-28 border-t border-cream/15 pt-20">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="border-l border-cream/15 pl-8">
+              <span class="font-serif text-3xl text-cream font-medium block mb-3">Intensivist Specialist</span>
+              <p class="text-cream/70 text-sm leading-relaxed">
+                Expert in Critical Care and emergency stabilization, managing hemodynamic monitoring, acute organ support, and complex inpatient intensive medical protocols with unwavering precision.
+              </p>
+            </div>
+            <div class="border-l border-cream/15 pl-8">
+              <span class="font-serif text-3xl text-cream font-medium block mb-3">Cardio & Diabetology</span>
+              <p class="text-cream/70 text-sm leading-relaxed">
+                Spearheads advanced preventative care and management for cardiovascular disorders, hypertension, insulin resistance, metabolic syndrome, and Type 1/Type 2 diabetes.
+              </p>
+            </div>
+            <div class="border-l border-cream/15 pl-8">
+              <span class="font-serif text-3xl text-cream font-medium block mb-3">Rheumatology Expert</span>
+              <p class="text-cream/70 text-sm leading-relaxed">
+                Specialized in diagnosing and treating chronic inflammatory disorders, autoimmune conditions, rheumatoid arthritis, gout, and systemic connective tissue diseases.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Specialties & Procedures (Dark) -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-28 scroll-mt-24">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6 border-b border-cream/15 pb-8">
+            <div>
+              <span class="text-cream uppercase text-xs tracking-[0.28em] font-semibold block mb-4">Areas of Clinical Focus</span>
+              <h2 class="font-serif font-medium text-cream leading-none tracking-tight reveal-anim" style="font-size: clamp(2.2rem, 5vw, 4rem);">
+                Specialized <em class="font-light italic text-cream/70">Expertise</em>
+              </h2>
+            </div>
+            <p class="text-cream/70 text-sm max-w-[34ch]">
+              Dr. Ankur Jain personally leads clinical evaluation, acute stabilization, and preventative protocols across these primary domains.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="border border-cream/10 rounded-[24px] p-8 bg-white/5 hover:border-cream/30 transition-all">
+              <span class="text-xs font-semibold uppercase tracking-widest text-cream/70 block mb-3">01 / Internal Medicine</span>
+              <h3 class="font-serif text-2xl font-semibold text-cream mb-3">General Physician & Internal Medicine</h3>
+              <p class="text-cream/70 text-sm leading-relaxed mb-6">
+                Comprehensive diagnostic evaluation and outpatient/inpatient management of complex adult illnesses, multi-organ disorders, and chronic disease prevention.
+              </p>
+              <ul class="text-xs text-cream space-y-2 font-medium">
+                <li>• Comprehensive Adult Health & Diagnostic Profiling</li>
+                <li>• Chronic & Acute Infectious Disease Management</li>
+                <li>• Evidence-Based Preventative Medicine & Screening</li>
+              </ul>
+            </div>
+
+            <div class="border border-cream/10 rounded-[24px] p-8 bg-white/5 hover:border-cream/30 transition-all">
+              <span class="text-xs font-semibold uppercase tracking-widest text-cream/70 block mb-3">02 / Critical Care</span>
+              <h3 class="font-serif text-2xl font-semibold text-cream mb-3">Critical Care (Intensivist) Services</h3>
+              <p class="text-cream/70 text-sm leading-relaxed mb-6">
+                Specialized ICU level management for acute life-threatening medical emergencies, respiratory compromise, hemodynamic instability, and severe metabolic crises.
+              </p>
+              <ul class="text-xs text-cream space-y-2 font-medium">
+                <li>• Intensive Care & Hemodynamic Monitoring</li>
+                <li>• Pre-Operative Assessment & Post-Op Stabilization</li>
+                <li>• Advanced Emergency Life Support Protocols</li>
+              </ul>
+            </div>
+
+            <div class="border border-cream/10 rounded-[24px] p-8 bg-white/5 hover:border-cream/30 transition-all">
+              <span class="text-xs font-semibold uppercase tracking-widest text-cream/70 block mb-3">03 / Cardio-Metabolic Care</span>
+              <h3 class="font-serif text-2xl font-semibold text-cream mb-3">Cardiology & Diabetology</h3>
+              <p class="text-cream/70 text-sm leading-relaxed mb-6">
+                Targeted management of cardiovascular risk factors, hypertension, hyperlipidemia, and blood glucose optimization to protect long-term vital vascular health.
+              </p>
+              <ul class="text-xs text-cream space-y-2 font-medium">
+                <li>• Type 1, Type 2 & Gestational Diabetes Management</li>
+                <li>• Hypertension & Lipid Profile Correction</li>
+                <li>• Non-Invasive Cardiac Risk & Vascular Screening</li>
+              </ul>
+            </div>
+
+            <div class="border border-cream/10 rounded-[24px] p-8 bg-white/5 hover:border-cream/30 transition-all">
+              <span class="text-xs font-semibold uppercase tracking-widest text-cream/70 block mb-3">04 / Rheumatology</span>
+              <h3 class="font-serif text-2xl font-semibold text-cream mb-3">Rheumatology & Autoimmune Care</h3>
+              <p class="text-cream/70 text-sm leading-relaxed mb-6">
+                Specialized diagnosis and targeted biologic/medical therapy for systemic inflammatory conditions, autoimmune disorders, and joint preservation.
+              </p>
+              <ul class="text-xs text-cream space-y-2 font-medium">
+                <li>• Rheumatoid Arthritis, Gout & Lupus Management</li>
+                <li>• Chronic Inflammation & Joint Pain Protocols</li>
+                <li>• Autoimmune & Systemic Connective Tissue Diagnostics</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA Band (Dark) -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-16">
+          <div class="bg-cream text-ink rounded-[28px] p-10 md:p-20 relative overflow-hidden">
+            <div class="absolute inset-0 grid-texture"></div>
+            <div class="relative z-10">
+              <span class="text-ink/75 uppercase text-xs tracking-[0.28em] font-semibold block mb-8">Personalized Consultation</span>
+              <h2 class="font-serif font-medium leading-[0.98] tracking-tight mb-12 max-w-[18ch] reveal-anim" style="font-size: clamp(2.4rem, 6vw, 5.2rem);">
+                Ready to schedule your consultation with <em class="font-light italic text-ink/90">Dr. Ankur Jain?</em>
+              </h2>
+              <div class="flex flex-wrap items-center gap-4">
+                <a href="contact.html" class="bg-ink text-cream px-8 py-4 rounded-full font-medium">
+                  Book your appointment
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer (Dark) -->
+        <footer class="bg-cream text-ink border-t border-ink/10">
+          <div class="max-w-[1240px] mx-auto px-6 md:px-10 pt-20 pb-10">
+            <div class="border-t border-ink/12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+              <div class="text-ink/45 text-xs">&copy; 2026 Medshine Clinic. All rights reserved.</div>
+            </div>
+          </div>
+        </footer>
+
+      </div> <!-- End Reveal Layer -->
+
+    </div> <!-- End Page Wrapper -->
+
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/transition.js"></script>
+    <script type="module" src="/src/animations.js"></script>
+  
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917506251933" target="_blank" class="fixed bottom-6 right-6 z-[9999] bg-[#25D366] text-white w-14 h-14 rounded-full shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:scale-110 hover:shadow-[0_6px_20px_rgba(37,211,102,0.23)] transition-all duration-300 flex items-center justify-center group" aria-label="Chat on WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 448 512">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+      </svg>
+      <!-- Tooltip -->
+      <span class="absolute right-full mr-4 bg-ink text-cream text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-sans">
+        Chat with us
+      </span>
+    </a>
+  </body>
+
+</html>

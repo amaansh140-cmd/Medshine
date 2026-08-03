@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Medshine Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: '#ffffff',
+              creamdeep: '#fafafa',
+              ink: '#1a1a1a',
+              inkmute: '#666666',
+              magenta: '#111111', 
+              magentadeep: '#000000',
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      ::selection { background-color: #1a1a1a; color: #ffffff; }
+      body { background-color: #ffffff; color: #1a1a1a; }
+      
+      .grid-texture {
+        background-image: linear-gradient(to right, rgba(26,26,26,0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(26,26,26,0.05) 1px, transparent 1px);
+        background-size: 54px 54px;
+      }
+      .grid-texture-light {
+        background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+        background-size: 60px 60px;
+      }
+      .hover-row { transition: transform 0.35s ease; }
+      .hover-row:hover { transform: translateX(-14px); }
+      
+      /* Inverted Reveal Layer Selection */
+      .scroll-reveal-layer ::selection { background-color: #ffffff; color: #1a1a1a; }
+    </style>
+  </head>
+  <body class="font-sans antialiased selection:bg-ink selection:text-cream">
+
+    <!-- SVG Defs for Mask and Gooey Filter -->
+    <svg class="svg-defs" style="position: absolute; width: 0; height: 0;">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 25 -10" result="goo" />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+        <mask id="blob-mask">
+          <rect width="100%" height="100%" fill="black" />
+          <g filter="url(#goo)" fill="white" id="mask-group">
+            <!-- Circles will be injected here by JS -->
+          </g>
+        </mask>
+      </defs>
+    </svg>
+    
+    <!-- Sticky Nav (Above all layers) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cream/85 backdrop-blur-md border-b border-ink/10">
+      <div class="max-w-[1240px] mx-auto px-6 md:px-10 h-[68px] flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-ink flex items-center justify-center text-cream">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm43.81,68.19-28.28,66a8,8,0,0,1-3.72,3.72l-66,28.28a8,8,0,0,1-10.36-10.36l28.28-66a8,8,0,0,1,3.72-3.72l66-28.28A8,8,0,0,1,171.81,92.19ZM128,112a16,16,0,1,0,16,16A16,16,0,0,0,128,112Z" class="reveal-anim"></path></svg>
+          </div>
+          <span class="font-serif font-semibold tracking-tight text-xl text-ink">Medshine</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm text-inkmute">
+          <a href="index.html" class="hover:text-ink transition-colors">Home</a>
+          <a href="about.html" class="text-ink font-medium">About Us</a>
+          <a href="treatments.html" class="hover:text-ink transition-colors">Treatments</a>
+          <a href="blog.html" class="hover:text-ink transition-colors">Blog</a>
+          <a href="contact.html" class="hover:text-ink transition-colors">Contact</a>
+        </div>
+        <a href="contact.html" class="bg-ink text-cream px-5 py-2 rounded-full text-[13.5px] hover:bg-magentadeep transition-colors hover-scale">
+          Book Consultation
+        </a>
+      </div>
+    </nav>
+
+    <div class="scroll-page-wrapper">
+      
+      <!-- ================= BASE LAYER (LIGHT) ================= -->
+      <div class="scroll-base-layer layer base-layer">
+        
+        <!-- Manifesto Hero -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 pt-32 pb-16">
+          <div class="flex items-center gap-4 mb-8">
+            <span class="text-magenta uppercase text-xs tracking-[0.28em] font-semibold">About Medshine Clinic</span>
+            <div class="flex-1 h-px bg-ink/15"></div>
+            <span class="text-inkmute text-sm">Since 2023</span>
+          </div>
+          <h1 class="font-serif font-medium leading-[0.95] tracking-tight text-ink max-w-[15ch] mb-8 reveal-anim" style="font-size: clamp(2.7rem, 8.5vw, 7.8rem);">
+            Where precision medicine meets <em class="font-light italic text-magenta">aesthetic</em> care.
+          </h1>
+          <p class="text-[17px] md:text-[19px] text-inkmute max-w-[48ch] leading-relaxed mb-10 font-light reveal-anim">
+            At Medshine Clinic, we provide holistic, multidisciplinary healthcare that looks beyond immediate ailments to foster lasting vitality, confidence, and skin wellness. A dedicated practice founded on science and compassionate listening.
+          </p>
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="treatments.html" class="bg-magenta text-cream px-8 py-4 rounded-full font-medium hover:bg-magentadeep transition-colors flex items-center gap-2 hover-scale">
+              Explore Our Treatments
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z" class="reveal-anim"></path></svg>
+            </a>
+            <a href="#doctors" class="flex items-center gap-3 text-ink hover:text-inkmute transition-colors font-medium">
+              <div class="w-9 h-9 rounded-full border border-ink/20 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z" transform="rotate(180 128 128)" class="reveal-anim"></path></svg>
+              </div>
+              Meet Our Doctors
+            </a>
+          </div>
+        </section>
+
+        <!-- Full-bleed Gradient/Texture Strip -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-24">
+          <div class="h-[320px] md:h-[480px] rounded-[20px] relative overflow-hidden flex items-end p-8 md:p-12 border border-ink/10">
+            <div class="absolute inset-0 bg-cover bg-center grayscale" style="background-image: url('/src/assets/about_box_bg.jpg');"></div>
+            <!-- Mobile animated fade (since they don't have the desktop cursor blob) -->
+            <div class="absolute inset-0 bg-cover bg-center md:hidden" style="background-image: url('/src/assets/about_box_after.jpg'); animation: mobileBeforeAfter 4s ease-in-out infinite alternate;"></div>
+            <div class="relative z-10 w-full flex justify-between items-end">
+              <h2 class="font-serif italic text-white drop-shadow-sm max-w-[20ch] reveal-anim" style="font-size: clamp(1.4rem, 3.5vw, 2.8rem);">
+                A life restored. A glow renewed.<br>Before the doubt sets in.
+              </h2>
+            </div>
+          </div>
+        </section>
+
+        <!-- Why we exist block -->
+        <section id="exist" class="max-w-[1240px] mx-auto px-6 md:px-10 mb-32 scroll-mt-24">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6">
+            <div class="md:col-span-4">
+              <span class="text-magenta uppercase text-xs tracking-[0.28em] font-semibold block mb-6">Why Medshine Exists</span>
+              <h2 class="font-serif font-medium text-ink leading-tight tracking-tight reveal-anim" style="font-size: clamp(2.1rem, 4.6vw, 3.6rem);">
+                Bridging clinical health and <em class="font-light italic">true healing</em>.
+              </h2>
+            </div>
+            <div class="md:col-start-6 md:col-span-7">
+              <p class="text-ink text-[18px] md:text-[21px] font-light leading-relaxed mb-6 reveal-anim">
+                In modern healthcare, patients are often divided between hospital diagnostics and superficial salons. Medshine Clinic unites both worlds under one trusted medical roof.
+              </p>
+              <p class="text-inkmute text-[16px] leading-relaxed mb-12 max-w-[50ch] reveal-anim">
+                By integrating rigorous clinical medicine with state-of-the-art dermatological and laser technology, our doctors create comprehensive care plans that promote internal vitality and outward beauty.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div>
+                  <div class="text-magenta mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z" class="reveal-anim"></path></svg></div>
+                  <h3 class="font-serif font-semibold text-lg text-ink mb-1 reveal-anim">Multidisciplinary Team</h3>
+                  <p class="text-inkmute text-sm reveal-anim">Collaborative physicians specializing in skin, hair, and internal health.</p>
+                </div>
+                <div>
+                  <div class="text-magenta mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M213.66,82.34l-80-40a8,8,0,0,0-7.32,0l-80,40A8,8,0,0,0,44,88a8.16,8.16,0,0,0,.92,3.73l80,133.33a8,8,0,0,0,13.73-.24l76.22-132.89A8,8,0,0,0,213.66,82.34ZM128,206.27,62,96.34l66-33Zm16-3.83V54.49l64.12,32.06Z" class="reveal-anim"></path></svg></div>
+                  <h3 class="font-serif font-semibold text-lg text-ink mb-1 reveal-anim">Advanced Technology</h3>
+                  <p class="text-inkmute text-sm reveal-anim">FDA-approved laser devices and evidence-based clinical therapies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Proof List -->
+        <section id="proof" class="max-w-[1240px] mx-auto px-6 md:px-10 mb-32 border-y border-ink/15 py-4">
+          <div class="group border-b border-ink/10 py-8 hover-row">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+              <div class="md:col-span-4 font-serif font-medium text-ink leading-none tracking-tight" style="font-size: clamp(2.6rem, 6vw, 4.8rem);">15+</div>
+              <div class="md:col-span-5 text-inkmute text-[15px] md:text-[16px]">Years of dedicated clinical excellence at Medshine.</div>
+              <div class="md:col-span-3 text-left md:text-right text-magenta uppercase tracking-[0.28em] text-[11px] font-semibold">Experience</div>
+            </div>
+          </div>
+          <div class="group border-b border-ink/10 py-8 hover-row">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+              <div class="md:col-span-4 font-serif font-medium text-ink leading-none tracking-tight" style="font-size: clamp(2.6rem, 6vw, 4.8rem);">10k+</div>
+              <div class="md:col-span-5 text-inkmute text-[15px] md:text-[16px]">Patients treated across medical, skin, and hair therapies.</div>
+              <div class="md:col-span-3 text-left md:text-right text-magenta uppercase tracking-[0.28em] text-[11px] font-semibold">Impact</div>
+            </div>
+          </div>
+          <div class="group border-b border-ink/10 py-8 hover-row">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+              <div class="md:col-span-4 font-serif font-medium text-ink leading-none tracking-tight" style="font-size: clamp(2.6rem, 6vw, 4.8rem);">50+</div>
+              <div class="md:col-span-5 text-inkmute text-[15px] md:text-[16px]">Specialized clinical procedures and aesthetic packages.</div>
+              <div class="md:col-span-3 text-left md:text-right text-magenta uppercase tracking-[0.28em] text-[11px] font-semibold">Treatments</div>
+            </div>
+          </div>
+          <div class="group py-8 hover-row">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+              <div class="md:col-span-4 font-serif font-medium text-ink leading-none tracking-tight" style="font-size: clamp(2.6rem, 6vw, 4.8rem);">2</div>
+              <div class="md:col-span-5 text-inkmute text-[15px] md:text-[16px]">Lead physician specialists directing personalized patient care.</div>
+              <div class="md:col-span-3 text-left md:text-right text-magenta uppercase tracking-[0.28em] text-[11px] font-semibold">Leadership</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Meet Our Doctors Section -->
+        <section id="doctors" class="max-w-[1240px] mx-auto px-6 md:px-10 mb-32 scroll-mt-24">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6">
+            <div>
+              <span class="text-magenta uppercase text-xs tracking-[0.28em] font-semibold block mb-4">Medical Leadership</span>
+              <h2 class="font-serif font-medium text-ink leading-none tracking-tight reveal-anim" style="font-size: clamp(2.2rem, 5vw, 4.2rem);">
+                Meet Our <em class="font-light italic text-inkmute">Physicians</em>
+              </h2>
+            </div>
+            <p class="text-inkmute text-sm max-w-[38ch] reveal-anim">
+              Our clinic is spearheaded by experienced doctors who combine deep medical diagnostics with advanced dermatological artistry.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Doctor 1: Dr. Priya Jain -->
+            <div class="border border-ink/10 rounded-[28px] p-8 md:p-10 bg-ink/5 flex flex-col justify-between relative overflow-hidden group">
+              <div>
+                <div class="flex items-center gap-4 mb-6">
+                  <img src="/public/doctor_portrait.jpg" alt="Dr. Priya Jain" class="w-16 h-16 rounded-full object-cover object-top border-2 border-ink/15 shadow-md flex-shrink-0">
+                  <div>
+                    <h3 class="font-serif font-semibold text-2xl text-ink reveal-anim">Dr. Priya Jain</h3>
+                    <p class="text-xs uppercase tracking-widest text-inkmute mt-1">Skin Specialist & Aesthetic Physician</p>
+                  </div>
+                </div>
+                <p class="text-inkmute text-[15.5px] leading-relaxed mb-8 reveal-anim">
+                  With over 15 years of clinical excellence, Dr. Priya Jain founded Medshine Clinic on the principle that healthcare should be an empowering journey. As a premier Skin Specialist and Aesthetic Physician, she leads non-surgical skin rejuvenation, laser medicine, and cellular anti-aging therapies.
+                </p>
+              </div>
+              <div class="border-t border-ink/10 pt-6 flex flex-wrap justify-between items-center gap-4 text-sm text-ink font-medium">
+                <div>
+                  <span class="block">Specialties: Skin Specialist & Aesthetic Physician</span>
+                  <span class="text-xs text-inkmute uppercase tracking-wider">MBBS, FFAC (Fellowships)</span>
+                </div>
+                <a href="dr-priya.html" class="inline-flex items-center gap-2 bg-ink text-cream px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-magenta transition-colors hover-scale">
+                  Know More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Doctor 2: Dr. Ankur Jain -->
+            <div class="border border-ink/10 rounded-[28px] p-8 md:p-10 bg-ink/5 flex flex-col justify-between relative overflow-hidden group">
+              <div>
+                <div class="flex items-center gap-4 mb-6">
+                  <img src="/public/dr_ankur_portrait.jpg" alt="Dr. Ankur Jain" class="w-16 h-16 rounded-full object-cover object-top border-2 border-ink/15 shadow-md flex-shrink-0">
+                  <div>
+                    <h3 class="font-serif font-semibold text-2xl text-ink reveal-anim">Dr. Ankur Jain</h3>
+                    <p class="text-xs uppercase tracking-widest text-inkmute mt-1">Internal Medicine & Critical Care Specialist</p>
+                  </div>
+                </div>
+                <p class="text-inkmute text-[15.5px] leading-relaxed mb-8 reveal-anim">
+                  Dr. Ankur Jain is a renowned specialist in Internal Medicine, General Physician care, Critical Care (Intensivist), Cardiology/Diabetology, and Rheumatology. Dedicated to evidence-based practice, Dr. Ankur Jain ensures every patient achieves lasting physiological balance and vital health.
+                </p>
+              </div>
+              <div class="border-t border-ink/10 pt-6 flex flex-wrap justify-between items-center gap-4 text-sm text-ink font-medium">
+                <div>
+                  <span class="block">Specialties: Internal Medicine, Cardiology/Diabetology & Critical Care</span>
+                  <span class="text-xs text-inkmute uppercase tracking-wider">M.B.B.S, M.D (Intensivist & Physician)</span>
+                </div>
+                <a href="dr-ankur.html" class="inline-flex items-center gap-2 bg-ink text-cream px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-magenta transition-colors hover-scale">
+                  Know More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Patient Testimonials Bento Grid -->
+        <section id="testimonials" class="max-w-[1240px] mx-auto px-6 md:px-10 mb-32">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6">
+            <div>
+              <span class="text-magenta uppercase text-xs tracking-[0.28em] font-semibold block mb-4">Patient Stories</span>
+              <h2 class="font-serif font-medium text-ink leading-none tracking-tight reveal-anim" style="font-size: clamp(2.2rem, 5vw, 4.2rem);">
+                Trusted by <em class="font-light italic text-inkmute">Thousands</em>
+              </h2>
+            </div>
+            <p class="text-inkmute text-sm max-w-[34ch] reveal-anim">
+              Real feedback from patients who found renewed confidence and health at Medshine Clinic.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="border border-ink/10 p-8 rounded-[24px] bg-ink/5 flex flex-col justify-between">
+              <p class="text-ink text-[16px] italic leading-relaxed mb-6 reveal-anim">
+                "Amazing experience - I had been to multiple dermats before but no results. Dr. Priya takes her time and helped me out with my acne scarring while always being available for immediate consults. Would highly recommend!!"
+              </p>
+              <div>
+                <div class="font-semibold text-ink text-sm flex items-center gap-1.5">
+                  <a href="https://www.google.com/maps/contrib/103448250313596073528/reviews?hl=en-GB" target="_blank" rel="noopener noreferrer" class="hover:underline inline-flex items-center gap-1">
+                    Esha Saini
+                    <svg class="opacity-70" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M224,104a8,8,0,0,1-16,0V59.31L109.66,157.66a8,8,0,0,1-11.32-11.32L196.69,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v80H40V64h80a8,8,0,0,0,0-16H40A16,16,0,0,0,24,64V216a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"></path></svg>
+                  </a>
+                </div>
+                <div class="text-xs text-inkmute">Acne Scarring Patient</div>
+              </div>
+            </div>
+
+            <div class="border border-ink/10 p-8 rounded-[24px] bg-ink/5 flex flex-col justify-between">
+              <p class="text-ink text-[16px] italic leading-relaxed mb-6 reveal-anim">
+                "I recently completed my underarm laser hair removal treatment and am very satisfied with the results. The treatment significantly reduced hair growth. Overall, I am happy with the experience and would recommend underarm laser treatment to anyone looking for a long-term solution for unwanted hair."
+              </p>
+              <div>
+                <div class="font-semibold text-ink text-sm flex items-center gap-1.5">
+                  <a href="https://www.google.com/maps/contrib/110249074581437994602/reviews?hl=en-GB" target="_blank" rel="noopener noreferrer" class="hover:underline inline-flex items-center gap-1">
+                    Prachi Birje
+                    <svg class="opacity-70" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M224,104a8,8,0,0,1-16,0V59.31L109.66,157.66a8,8,0,0,1-11.32-11.32L196.69,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v80H40V64h80a8,8,0,0,0,0-16H40A16,16,0,0,0,24,64V216a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"></path></svg>
+                  </a>
+                </div>
+                <div class="text-xs text-inkmute">Laser Hair Removal Patient</div>
+              </div>
+            </div>
+
+            <div class="border border-ink/10 p-8 rounded-[24px] bg-ink/5 flex flex-col justify-between">
+              <p class="text-ink text-[16px] italic leading-relaxed mb-6 reveal-anim">
+                "Best clinic for skin treatment. i did my pigmentation treatment with Dr priya and i got the amazing results with in few sessions. Highly recommended for pigmentation."
+              </p>
+              <div>
+                <div class="font-semibold text-ink text-sm flex items-center gap-1.5">
+                  <a href="https://www.google.com/maps/contrib/113973589619194444635/reviews?hl=en-GB" target="_blank" rel="noopener noreferrer" class="hover:underline inline-flex items-center gap-1">
+                    Vinod Tiwari
+                    <svg class="opacity-70" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M224,104a8,8,0,0,1-16,0V59.31L109.66,157.66a8,8,0,0,1-11.32-11.32L196.69,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v80H40V64h80a8,8,0,0,0,0-16H40A16,16,0,0,0,24,64V216a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"></path></svg>
+                  </a>
+                </div>
+                <div class="text-xs text-inkmute">Pigmentation Treatment Patient</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Values Grid -->
+        <section id="values" class="max-w-[1240px] mx-auto px-6 md:px-10 mb-32">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6">
+            <h2 class="font-serif font-medium text-ink leading-none tracking-tight reveal-anim" style="font-size: clamp(2.1rem, 5vw, 4rem);">
+              What we hold <em class="font-light italic text-inkmute">true</em>
+            </h2>
+            <p class="text-inkmute text-sm max-w-[34ch] reveal-anim">
+              The core principles that guide our practice and shape every patient interaction.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+            <div class="border-t border-ink/15 pt-7">
+              <div class="flex items-baseline gap-4 mb-2">
+                <span class="font-serif text-magenta text-lg">01</span>
+                <h3 class="font-serif font-semibold text-ink reveal-anim" style="font-size: clamp(1.4rem, 2.4vw, 1.9rem);">Empathy is a diagnostic tool</h3>
+              </div>
+              <p class="text-inkmute text-[15.5px] md:pl-9 leading-relaxed reveal-anim">
+                Listening is the most powerful instrument in clinical medicine.
+              </p>
+            </div>
+            <div class="border-t border-ink/15 pt-7">
+              <div class="flex items-baseline gap-4 mb-2">
+                <span class="font-serif text-magenta text-lg">02</span>
+                <h3 class="font-serif font-semibold text-ink reveal-anim" style="font-size: clamp(1.4rem, 2.4vw, 1.9rem);">Science guides, care heals</h3>
+              </div>
+              <p class="text-inkmute text-[15.5px] md:pl-9 leading-relaxed reveal-anim">
+                Data and diagnostics inform us; genuine physician compassion heals us.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA Band -->
+        <section id="join" class="max-w-[1240px] mx-auto px-6 md:px-10 mb-16">
+          <div class="bg-ink text-cream rounded-[28px] p-10 md:p-20 relative overflow-hidden">
+            <div class="absolute inset-0 grid-texture-light"></div>
+            <div class="relative z-10">
+              <span class="text-cream/75 uppercase text-xs tracking-[0.28em] font-semibold block mb-8">Begin your journey</span>
+              <h2 class="font-serif font-medium leading-[0.98] tracking-tight mb-12 max-w-[16ch] reveal-anim" style="font-size: clamp(2.4rem, 6vw, 5.6rem);">
+                Bring the desire to heal.<br>
+                <em class="font-light italic text-cream/90">We will guide the rest.</em>
+              </h2>
+              <div class="flex flex-wrap items-center gap-4">
+                <a href="contact.html" class="bg-cream text-ink px-8 py-4 rounded-full font-medium hover:bg-transparent hover:text-cream hover:ring-1 hover:ring-cream transition-all hover-scale">
+                  Book your consultation
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-ink text-cream">
+          <div class="max-w-[1240px] mx-auto px-6 md:px-10 pt-20 pb-10">
+            <div class="border-t border-cream/12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+              <div class="text-cream/45 text-xs">&copy; 2026 Medshine Clinic. All rights reserved.</div>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+
+      <!-- ================= REVEAL LAYER (DARK MODE) ================= -->
+      <div class="scroll-reveal-layer layer reveal-layer bg-ink" id="reveal-layer" aria-hidden="true">
+        
+        <!-- Manifesto Hero (Dark) -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 pt-32 pb-16">
+          <div class="flex items-center gap-4 mb-8">
+            <span class="text-cream uppercase text-xs tracking-[0.28em] font-semibold">About Medshine Clinic</span>
+            <div class="flex-1 h-px bg-cream/15"></div>
+            <span class="text-cream/70 text-sm">Since 2023</span>
+          </div>
+          <h1 class="font-serif font-medium leading-[0.95] tracking-tight text-cream max-w-[15ch] mb-8 reveal-anim" style="font-size: clamp(2.7rem, 8.5vw, 7.8rem);">
+            Where precision medicine meets <em class="font-light italic text-gray-300">aesthetic</em> care.
+          </h1>
+          <p class="text-[17px] md:text-[19px] text-cream/70 max-w-[48ch] leading-relaxed mb-10 font-light reveal-anim">
+            At Medshine Clinic, we provide holistic, multidisciplinary healthcare that looks beyond immediate ailments to foster lasting vitality, confidence, and skin wellness. A dedicated practice founded on science and compassionate listening.
+          </p>
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="bg-cream text-ink px-8 py-4 rounded-full font-medium flex items-center gap-2">
+              Explore Our Treatments
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z" class="reveal-anim"></path></svg>
+            </div>
+            <div class="flex items-center gap-3 text-cream font-medium">
+              <div class="w-9 h-9 rounded-full border border-cream/20 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z" transform="rotate(180 128 128)" class="reveal-anim"></path></svg>
+              </div>
+              Meet Our Doctors
+            </div>
+          </div>
+        </section>
+
+        <!-- Full-bleed Gradient/Texture Strip (Dark) -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-24">
+          <div class="h-[320px] md:h-[480px] rounded-[20px] relative overflow-hidden flex items-end p-8 md:p-12 border border-cream/10">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/src/assets/about_box_after.jpg');"></div>
+            <div class="relative z-10 w-full flex justify-between items-end">
+              <h2 class="font-serif italic text-cream max-w-[20ch] reveal-anim" style="font-size: clamp(1.4rem, 3.5vw, 2.8rem);">
+                A life restored. A glow renewed.<br>Before the doubt sets in.
+              </h2>
+            </div>
+          </div>
+        </section>
+
+        <!-- Why we exist block (Dark) -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-32">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6">
+            <div class="md:col-span-4">
+              <span class="text-cream uppercase text-xs tracking-[0.28em] font-semibold block mb-6">Why Medshine Exists</span>
+              <h2 class="font-serif font-medium text-cream leading-tight tracking-tight reveal-anim" style="font-size: clamp(2.1rem, 4.6vw, 3.6rem);">
+                Bridging clinical health and <em class="font-light italic text-gray-300">true healing</em>.
+              </h2>
+            </div>
+            <div class="md:col-start-6 md:col-span-7">
+              <p class="text-cream text-[18px] md:text-[21px] font-light leading-relaxed mb-6 reveal-anim">
+                In modern healthcare, patients are often divided between hospital diagnostics and superficial salons. Medshine Clinic unites both worlds under one trusted medical roof.
+              </p>
+              <p class="text-cream/70 text-[16px] leading-relaxed mb-12 max-w-[50ch] reveal-anim">
+                By integrating rigorous clinical medicine with state-of-the-art dermatological and laser technology, our doctors create comprehensive care plans that promote internal vitality and outward beauty.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div>
+                  <div class="text-cream mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z" class="reveal-anim"></path></svg></div>
+                  <h3 class="font-serif font-semibold text-lg text-cream mb-1 reveal-anim">Multidisciplinary Team</h3>
+                  <p class="text-cream/70 text-sm reveal-anim">Collaborative physicians specializing in skin, hair, and internal health.</p>
+                </div>
+                <div>
+                  <div class="text-cream mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M213.66,82.34l-80-40a8,8,0,0,0-7.32,0l-80,40A8,8,0,0,0,44,88a8.16,8.16,0,0,0,.92,3.73l80,133.33a8,8,0,0,0,13.73-.24l76.22-132.89A8,8,0,0,0,213.66,82.34ZM128,206.27,62,96.34l66-33Zm16-3.83V54.49l64.12,32.06Z" class="reveal-anim"></path></svg></div>
+                  <h3 class="font-serif font-semibold text-lg text-cream mb-1 reveal-anim">Advanced Technology</h3>
+                  <p class="text-cream/70 text-sm reveal-anim">FDA-approved laser devices and evidence-based clinical therapies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Proof List (Dark) -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-32 border-y border-cream/15 py-4">
+          <div class="group border-b border-cream/10 py-8 hover-row">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+              <div class="md:col-span-4 font-serif font-medium text-cream leading-none tracking-tight" style="font-size: clamp(2.6rem, 6vw, 4.8rem);">15+</div>
+              <div class="md:col-span-5 text-cream/70 text-[15px] md:text-[16px]">Years of dedicated clinical excellence at Medshine.</div>
+              <div class="md:col-span-3 text-left md:text-right text-cream uppercase tracking-[0.28em] text-[11px] font-semibold">Experience</div>
+            </div>
+          </div>
+          <div class="group border-b border-cream/10 py-8 hover-row">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+              <div class="md:col-span-4 font-serif font-medium text-cream leading-none tracking-tight" style="font-size: clamp(2.6rem, 6vw, 4.8rem);">10k+</div>
+              <div class="md:col-span-5 text-cream/70 text-[15px] md:text-[16px]">Patients treated across medical, skin, and hair therapies.</div>
+              <div class="md:col-span-3 text-left md:text-right text-cream uppercase tracking-[0.28em] text-[11px] font-semibold">Impact</div>
+            </div>
+          </div>
+          <div class="group border-b border-cream/10 py-8 hover-row">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+              <div class="md:col-span-4 font-serif font-medium text-cream leading-none tracking-tight" style="font-size: clamp(2.6rem, 6vw, 4.8rem);">50+</div>
+              <div class="md:col-span-5 text-cream/70 text-[15px] md:text-[16px]">Specialized clinical procedures and aesthetic packages.</div>
+              <div class="md:col-span-3 text-left md:text-right text-cream uppercase tracking-[0.28em] text-[11px] font-semibold">Treatments</div>
+            </div>
+          </div>
+          <div class="group py-8 hover-row">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+              <div class="md:col-span-4 font-serif font-medium text-cream leading-none tracking-tight" style="font-size: clamp(2.6rem, 6vw, 4.8rem);">2</div>
+              <div class="md:col-span-5 text-cream/70 text-[15px] md:text-[16px]">Lead physician specialists directing personalized patient care.</div>
+              <div class="md:col-span-3 text-left md:text-right text-cream uppercase tracking-[0.28em] text-[11px] font-semibold">Leadership</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Meet Our Doctors Section (Dark Mode) -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-32">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6">
+            <div>
+              <span class="text-cream uppercase text-xs tracking-[0.28em] font-semibold block mb-4">Medical Leadership</span>
+              <h2 class="font-serif font-medium text-cream leading-none tracking-tight reveal-anim" style="font-size: clamp(2.2rem, 5vw, 4.2rem);">
+                Meet Our <em class="font-light italic text-cream/70">Physicians</em>
+              </h2>
+            </div>
+            <p class="text-cream/70 text-sm max-w-[38ch] reveal-anim">
+              Our clinic is spearheaded by experienced doctors who combine deep medical diagnostics with advanced dermatological artistry.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Doctor 1: Dr. Priya Jain (Dark) -->
+            <div class="border border-cream/10 rounded-[28px] p-8 md:p-10 bg-white/5 flex flex-col justify-between relative overflow-hidden group">
+              <div>
+                <div class="flex items-center gap-4 mb-6">
+                  <img src="/public/doctor_portrait.jpg" alt="Dr. Priya Jain" class="w-16 h-16 rounded-full object-cover object-top border-2 border-cream/20 shadow-md flex-shrink-0">
+                  <div>
+                    <h3 class="font-serif font-semibold text-2xl text-cream reveal-anim">Dr. Priya Jain</h3>
+                    <p class="text-xs uppercase tracking-widest text-cream/70 mt-1">Skin Specialist & Aesthetic Physician</p>
+                  </div>
+                </div>
+                <p class="text-cream/70 text-[15.5px] leading-relaxed mb-8 reveal-anim">
+                  With over 15 years of clinical excellence, Dr. Priya Jain founded Medshine Clinic on the principle that healthcare should be an empowering journey. As a premier Skin Specialist and Aesthetic Physician, she leads non-surgical skin rejuvenation, laser medicine, and cellular anti-aging therapies.
+                </p>
+              </div>
+              <div class="border-t border-cream/10 pt-6 flex flex-wrap justify-between items-center gap-4 text-sm text-cream font-medium">
+                <div>
+                  <span class="block">Specialties: Skin Specialist & Aesthetic Physician</span>
+                  <span class="text-xs text-cream/70 uppercase tracking-wider">MBBS, FFAC (Fellowships)</span>
+                </div>
+                <a href="dr-priya.html" class="inline-flex items-center gap-2 bg-cream text-ink px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-emerald-400 transition-colors hover-scale">
+                  Know More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Doctor 2: Dr. Ankur Jain (Dark) -->
+            <div class="border border-cream/10 rounded-[28px] p-8 md:p-10 bg-white/5 flex flex-col justify-between relative overflow-hidden group">
+              <div>
+                <div class="flex items-center gap-4 mb-6">
+                  <img src="/public/dr_ankur_portrait.jpg" alt="Dr. Ankur Jain" class="w-16 h-16 rounded-full object-cover object-top border-2 border-cream/20 shadow-md flex-shrink-0">
+                  <div>
+                    <h3 class="font-serif font-semibold text-2xl text-cream reveal-anim">Dr. Ankur Jain</h3>
+                    <p class="text-xs uppercase tracking-widest text-cream/70 mt-1">Internal Medicine & Critical Care Specialist</p>
+                  </div>
+                </div>
+                <p class="text-cream/70 text-[15.5px] leading-relaxed mb-8 reveal-anim">
+                  Dr. Ankur Jain is a renowned specialist in Internal Medicine, General Physician care, Critical Care (Intensivist), Cardiology/Diabetology, and Rheumatology. Dedicated to evidence-based practice, Dr. Ankur Jain ensures every patient achieves lasting physiological balance and vital health.
+                </p>
+              </div>
+              <div class="border-t border-cream/10 pt-6 flex flex-wrap justify-between items-center gap-4 text-sm text-cream font-medium">
+                <div>
+                  <span class="block">Specialties: Internal Medicine, Cardiology/Diabetology & Critical Care</span>
+                  <span class="text-xs text-cream/70 uppercase tracking-wider">M.B.B.S, M.D (Intensivist & Physician)</span>
+                </div>
+                <a href="dr-ankur.html" class="inline-flex items-center gap-2 bg-cream text-ink px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-emerald-400 transition-colors hover-scale">
+                  Know More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Patient Testimonials Bento Grid (Dark Mode) -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-32">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6">
+            <div>
+              <span class="text-cream uppercase text-xs tracking-[0.28em] font-semibold block mb-4">Patient Stories</span>
+              <h2 class="font-serif font-medium text-cream leading-none tracking-tight reveal-anim" style="font-size: clamp(2.2rem, 5vw, 4.2rem);">
+                Trusted by <em class="font-light italic text-cream/70">Thousands</em>
+              </h2>
+            </div>
+            <p class="text-cream/70 text-sm max-w-[34ch] reveal-anim">
+              Real feedback from patients who found renewed confidence and health at Medshine Clinic.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="border border-cream/10 p-8 rounded-[24px] bg-white/5 flex flex-col justify-between">
+              <p class="text-cream text-[16px] italic leading-relaxed mb-6 reveal-anim">
+                "Amazing experience - I had been to multiple dermats before but no results. Dr. Priya takes her time and helped me out with my acne scarring while always being available for immediate consults. Would highly recommend!!"
+              </p>
+              <div>
+                <div class="font-semibold text-cream text-sm flex items-center gap-1.5">
+                  <a href="https://www.google.com/maps/contrib/103448250313596073528/reviews?hl=en-GB" target="_blank" rel="noopener noreferrer" class="hover:underline inline-flex items-center gap-1">
+                    Esha Saini
+                    <svg class="opacity-70" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M224,104a8,8,0,0,1-16,0V59.31L109.66,157.66a8,8,0,0,1-11.32-11.32L196.69,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v80H40V64h80a8,8,0,0,0,0-16H40A16,16,0,0,0,24,64V216a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"></path></svg>
+                  </a>
+                </div>
+                <div class="text-xs text-cream/70">Acne Scarring Patient</div>
+              </div>
+            </div>
+
+            <div class="border border-cream/10 p-8 rounded-[24px] bg-white/5 flex flex-col justify-between">
+              <p class="text-cream text-[16px] italic leading-relaxed mb-6 reveal-anim">
+                "I recently completed my underarm laser hair removal treatment and am very satisfied with the results. The treatment significantly reduced hair growth. Overall, I am happy with the experience and would recommend underarm laser treatment to anyone looking for a long-term solution for unwanted hair."
+              </p>
+              <div>
+                <div class="font-semibold text-cream text-sm flex items-center gap-1.5">
+                  <a href="https://www.google.com/maps/contrib/110249074581437994602/reviews?hl=en-GB" target="_blank" rel="noopener noreferrer" class="hover:underline inline-flex items-center gap-1">
+                    Prachi Birje
+                    <svg class="opacity-70" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M224,104a8,8,0,0,1-16,0V59.31L109.66,157.66a8,8,0,0,1-11.32-11.32L196.69,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v80H40V64h80a8,8,0,0,0,0-16H40A16,16,0,0,0,24,64V216a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"></path></svg>
+                  </a>
+                </div>
+                <div class="text-xs text-cream/70">Laser Hair Removal Patient</div>
+              </div>
+            </div>
+
+            <div class="border border-cream/10 p-8 rounded-[24px] bg-white/5 flex flex-col justify-between">
+              <p class="text-cream text-[16px] italic leading-relaxed mb-6 reveal-anim">
+                "Best clinic for skin treatment. i did my pigmentation treatment with Dr priya and i got the amazing results with in few sessions. Highly recommended for pigmentation."
+              </p>
+              <div>
+                <div class="font-semibold text-cream text-sm flex items-center gap-1.5">
+                  <a href="https://www.google.com/maps/contrib/113973589619194444635/reviews?hl=en-GB" target="_blank" rel="noopener noreferrer" class="hover:underline inline-flex items-center gap-1">
+                    Vinod Tiwari
+                    <svg class="opacity-70" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M224,104a8,8,0,0,1-16,0V59.31L109.66,157.66a8,8,0,0,1-11.32-11.32L196.69,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v80H40V64h80a8,8,0,0,0,0-16H40A16,16,0,0,0,24,64V216a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"></path></svg>
+                  </a>
+                </div>
+                <div class="text-xs text-cream/70">Pigmentation Treatment Patient</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Values Grid (Dark) -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-32">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6">
+            <h2 class="font-serif font-medium text-cream leading-none tracking-tight reveal-anim" style="font-size: clamp(2.1rem, 5vw, 4rem);">
+              What we hold <em class="font-light italic text-cream/70">true</em>
+            </h2>
+            <p class="text-cream/70 text-sm max-w-[34ch] reveal-anim">
+              The core principles that guide our practice and shape every patient interaction.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+            <div class="border-t border-cream/15 pt-7">
+              <div class="flex items-baseline gap-4 mb-2">
+                <span class="font-serif text-cream text-lg">01</span>
+                <h3 class="font-serif font-semibold text-cream reveal-anim" style="font-size: clamp(1.4rem, 2.4vw, 1.9rem);">Empathy is a diagnostic tool</h3>
+              </div>
+              <p class="text-cream/70 text-[15.5px] md:pl-9 leading-relaxed reveal-anim">
+                Listening is the most powerful instrument in clinical medicine.
+              </p>
+            </div>
+            <div class="border-t border-cream/15 pt-7">
+              <div class="flex items-baseline gap-4 mb-2">
+                <span class="font-serif text-cream text-lg">02</span>
+                <h3 class="font-serif font-semibold text-cream reveal-anim" style="font-size: clamp(1.4rem, 2.4vw, 1.9rem);">Science guides, care heals</h3>
+              </div>
+              <p class="text-cream/70 text-[15.5px] md:pl-9 leading-relaxed reveal-anim">
+                Data and diagnostics inform us; genuine physician compassion heals us.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA Band (Light in Dark Mode) -->
+        <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-16">
+          <div class="bg-cream text-ink rounded-[28px] p-10 md:p-20 relative overflow-hidden">
+            <div class="absolute inset-0 grid-texture"></div>
+            <div class="relative z-10">
+              <span class="text-ink/75 uppercase text-xs tracking-[0.28em] font-semibold block mb-8">Begin your journey</span>
+              <h2 class="font-serif font-medium leading-[0.98] tracking-tight mb-12 max-w-[16ch] reveal-anim" style="font-size: clamp(2.4rem, 6vw, 5.6rem);">
+                Bring the desire to heal.<br>
+                <em class="font-light italic text-ink/90">We will guide the rest.</em>
+              </h2>
+              <div class="flex flex-wrap items-center gap-4">
+                <div class="bg-ink text-cream px-8 py-4 rounded-full font-medium">
+                  Book your consultation
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer (Light in Dark Mode) -->
+        <footer class="bg-cream text-ink border-t border-ink/10">
+          <div class="max-w-[1240px] mx-auto px-6 md:px-10 pt-20 pb-10">
+            <div class="border-t border-ink/12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+              <div class="text-ink/45 text-xs">&copy; 2026 Medshine Clinic. All rights reserved.</div>
+            </div>
+          </div>
+        </footer>
+
+      </div> <!-- End Reveal Layer -->
+
+    </div> <!-- End Page Wrapper -->
+
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/transition.js"></script>
+    <script type="module" src="/src/animations.js"></script>
+  
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917506251933" target="_blank" class="fixed bottom-6 right-6 z-[9999] bg-[#25D366] text-white w-14 h-14 rounded-full shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:scale-110 hover:shadow-[0_6px_20px_rgba(37,211,102,0.23)] transition-all duration-300 flex items-center justify-center group" aria-label="Chat on WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 448 512">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+      </svg>
+      <!-- Tooltip -->
+      <span class="absolute right-full mr-4 bg-ink text-cream text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-sans">
+        Chat with us
+      </span>
+    </a>
+  </body>
+
+</html>
