@@ -629,10 +629,3 @@ img, video, svg {
   70%, 100% { opacity: 1; }
 }
 
-/* Use portrait image for mobile hero to prevent blurring from scaling */
-@media (max-width: 768px) {
-  .base-layer .background,
-  .reveal-layer .background {
-    background-image: url('/src/assets/doctor_portrait_1784785148083.jpg') !important;
-  }
-}
