@@ -354,19 +354,7 @@ img, video, svg {
    Mobile Optimization (max-width: 768px)
    ========================================= */
 @media (max-width: 768px) {
-  /* Disable SVG blob mask and scroll reveal overlays on mobile to ensure buttery 60fps scrolling */
-  .scroll-reveal-layer,
-  .svg-defs {
-    display: none !important;
-  }
 
-  /* In mobile view, remove the blob mask completely and create a smooth crossfade effect strictly on the home page hero! */
-  .hero .reveal-layer {
-    display: block !important;
-    -webkit-mask: none !important;
-    mask: none !important;
-    animation: mobileHeroFade 6s ease-in-out infinite alternate !important;
-  }
 
   /* Prevent any long medical term or title from ever overflowing the screen */
   h1, h2, h3, h4, .font-serif {
@@ -624,27 +612,7 @@ img, video, svg {
   transform: translateX(6px);
 }
 
-/* On mobile, completely disable the reveal animation and grayscale to prevent hardware-acceleration blur */
-@media (max-width: 768px) {
-  .hero {
-    min-height: 100svh !important;
-    height: 100svh !important;
-    overflow: hidden;
-  }
-  
-  .hero .reveal-layer {
-    animation: none !important;
-    opacity: 1 !important;
-    -webkit-mask: none !important;
-    mask: none !important;
-  }
-  
-  .base-layer .background,
-  .reveal-layer .background {
-    background-image: url('/src/assets/dr_priya_portrait_pink.jpg') !important;
-    filter: none !important;
-    background-size: 100% 100% !important; /* Force fit to screen ratio exactly */
-    background-position: top center !important;
-  }
+@keyframes mobileBeforeAfter {
+  0%, 30% { opacity: 0; }
+  70%, 100% { opacity: 1; }
 }
-
