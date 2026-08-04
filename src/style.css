@@ -82,7 +82,7 @@ body {
 
 /* Dark text for base layer */
 .text-dark {
-  color: #1a1a1a;
+  color: #065F46;
 }
 
 /* Light text for reveal layer */
@@ -188,7 +188,7 @@ body {
 
 /* Emerald Green Text inside Blob Reveal */
 .reveal-layer *, .scroll-reveal-layer * {
-  color: #10b981 !important;
+  color: #065F46 !important;
 }
 
 .scroll-base-layer {
@@ -430,7 +430,7 @@ img, video, svg {
     border-radius: 8px !important;
     border: 1px solid rgba(26, 26, 26, 0.15) !important;
     background-color: rgba(26, 26, 26, 0.05) !important;
-    color: #1a1a1a !important;
+    color: #065F46 !important;
     outline: none !important;
     margin-left: 0.5rem;
     cursor: pointer;
@@ -452,7 +452,7 @@ img, video, svg {
   .name {
     font-size: clamp(3.2rem, 14vw, 4.5rem) !important;
     line-height: 0.98 !important;
-    color: #1a1a1a !important;
+    color: #065F46 !important;
     text-shadow: 0 2px 24px rgba(255, 255, 255, 0.95), 0 0 40px rgba(255, 255, 255, 1) !important;
   }
   .jain-script {
@@ -629,7 +629,7 @@ img, video, svg {
 .mobile-drawer-link {
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
-  color: #1a1a1a;
+  color: #065F46;
   text-decoration: none;
   padding: 0.75rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -639,7 +639,7 @@ img, video, svg {
   transition: color 0.2s ease, transform 0.2s ease;
 }
 .mobile-drawer-link:hover {
-  color: #10b981;
+  color: #065F46;
   transform: translateX(6px);
 }
 
