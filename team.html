@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Team | Medshine Clinic</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="/src/style.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: '#FDFBF7',
+              creamdeep: '#F5F2EA',
+              ink: '#065F46',
+              inkmute: '#059669',
+              magenta: '#111111', 
+              magentadeep: '#000000',
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+<style>
+      ::selection { background-color: #065F46; color: #FDFBF7; }
+      body { background-color: #FDFBF7; color: #065F46; }
+      
+      .grid-texture {
+        background-image: linear-gradient(to right, rgba(26,26,26,0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(26,26,26,0.05) 1px, transparent 1px);
+        background-size: 54px 54px;
+      }
+      .grid-texture-light {
+        background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+        background-size: 60px 60px;
+      }
+      .hover-row { transition: transform 0.35s ease; }
+      .hover-row:hover { transform: translateX(-14px); }
+      
+      /* Inverted Reveal Layer Selection */
+      .scroll-reveal-layer ::selection { background-color: #FDFBF7; color: #065F46; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-ink selection:text-cream">
+<!-- SVG Defs for Mask and Gooey Filter -->
+<!-- Sticky Nav (Above all layers) -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-cream/85 backdrop-blur-md border-b border-ink/10">
+<div class="max-w-[1240px] mx-auto px-6 md:px-10 h-[68px] flex items-center justify-between">
+<a class="flex items-center gap-3" href="index.html">
+<div class="w-7 h-7 rounded-full bg-ink flex items-center justify-center text-cream">
+<svg fill="currentColor" height="16" viewbox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path class="reveal-anim" d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm43.81,68.19-28.28,66a8,8,0,0,1-3.72,3.72l-66,28.28a8,8,0,0,1-10.36-10.36l28.28-66a8,8,0,0,1,3.72-3.72l66-28.28A8,8,0,0,1,171.81,92.19ZM128,112a16,16,0,1,0,16,16A16,16,0,0,0,128,112Z"></path></svg>
+</div>
+<span class="font-serif font-semibold tracking-tight text-xl text-ink">Medshine</span>
+</a>
+<div class="hidden md:flex items-center gap-8 text-sm text-inkmute">
+<a class="hover:text-ink transition-colors" href="index.html">Home</a>
+<a class="text-ink font-medium" href="team.html">Team</a>
+<a class="hover:text-ink transition-colors" href="treatments.html">Treatments</a>
+<a class="hover:text-ink transition-colors" href="blog.html">Blog</a>
+<a class="hover:text-ink transition-colors" href="contact.html">Contact</a>
+</div>
+<a class="bg-ink text-cream px-5 py-2 rounded-full text-[13.5px] hover:bg-magentadeep transition-colors hover-scale" href="contact.html">
+          Book Consultation
+        </a>
+</div>
+</nav>
+<!-- Manifesto Hero -->
+<section class="max-w-[1240px] mx-auto px-6 md:px-10 pt-32 pb-16">
+<div class="flex items-center gap-4 mb-8">
+<span class="text-magenta uppercase text-xs tracking-[0.28em] font-semibold">Our Team</span>
+<div class="flex-1 h-px bg-ink/15"></div>
+<span class="text-inkmute text-sm">Since 2023</span>
+</div>
+<h1 class="font-serif font-medium leading-[0.95] tracking-tight text-ink max-w-[15ch] mb-8 reveal-anim" style="font-size: clamp(2.7rem, 8.5vw, 7.8rem);">Our Dedicated <em class="font-light italic text-inkmute">Team</em></h1>
+<p class="text-[17px] md:text-[19px] text-inkmute max-w-[48ch] leading-relaxed mb-10 font-light reveal-anim">Meet the experienced medical professionals dedicated to your clinical health and aesthetic care.</p>
+<div class="flex flex-wrap items-center gap-4">
+<a class="bg-magenta text-cream px-8 py-4 rounded-full font-medium hover:bg-magentadeep transition-colors flex items-center gap-2 hover-scale" href="treatments.html">
+              Explore Our Treatments
+              <svg fill="currentColor" height="16" viewbox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path class="reveal-anim" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+</a>
+<a class="flex items-center gap-3 text-ink hover:text-inkmute transition-colors font-medium" href="#doctors">
+<div class="w-9 h-9 rounded-full border border-ink/20 flex items-center justify-center">
+<svg fill="currentColor" height="16" viewbox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path class="reveal-anim" d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z" transform="rotate(180 128 128)"></path></svg>
+</div>
+              Meet Our Doctors
+            </a>
+</div>
+</section>
+<!-- Full-bleed Gradient/Texture Strip -->
+
+<!-- Why we exist block -->
+
+<!-- Proof List -->
+
+<!-- Meet Our Doctors Section -->
+<section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-32 scroll-mt-24" id="doctors">
+<div class="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6">
+<div>
+<span class="text-magenta uppercase text-xs tracking-[0.28em] font-semibold block mb-4">Medical Leadership</span>
+<h2 class="font-serif font-medium text-ink leading-none tracking-tight reveal-anim" style="font-size: clamp(2.2rem, 5vw, 4.2rem);">
+                Meet Our <em class="font-light italic text-inkmute">Physicians</em>
+</h2>
+</div>
+<p class="text-inkmute text-sm max-w-[38ch] reveal-anim">
+              Our clinic is spearheaded by experienced doctors who combine deep medical diagnostics with advanced dermatological artistry.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Doctor 1: Dr. Priya Jain -->
+<div class="border border-ink/10 rounded-[28px] p-8 md:p-10 bg-ink/5 flex flex-col justify-between relative overflow-hidden group">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<img alt="Dr. Priya Jain" class="w-16 h-16 rounded-full object-cover object-top border-2 border-ink/15 shadow-md flex-shrink-0" src="/public/doctor_portrait.jpg"/>
+<div>
+<h3 class="font-serif font-semibold text-2xl text-ink reveal-anim">Dr. Priya Jain</h3>
+<p class="text-xs uppercase tracking-widest text-inkmute mt-1">Skin Specialist &amp; Aesthetic Physician</p>
+</div>
+</div>
+<p class="text-inkmute text-[15.5px] leading-relaxed mb-8 reveal-anim">
+                  With over 15 years of clinical excellence, Dr. Priya Jain founded Medshine Clinic on the principle that healthcare should be an empowering journey. As a premier Skin Specialist and Aesthetic Physician, she leads non-surgical skin rejuvenation, laser medicine, and cellular anti-aging therapies.
+                </p>
+</div>
+<div class="border-t border-ink/10 pt-6 flex flex-wrap justify-between items-center gap-4 text-sm text-ink font-medium">
+<div>
+<span class="block">Specialties: Skin Specialist &amp; Aesthetic Physician</span>
+<span class="text-xs text-inkmute uppercase tracking-wider">MBBS, FFAC (Fellowships)</span>
+</div>
+<a class="inline-flex items-center gap-2 bg-ink text-cream px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-magenta transition-colors hover-scale" href="dr-priya.html">
+                  Know More
+                  <svg fill="currentColor" height="12" viewbox="0 0 256 256" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+</a>
+</div>
+</div>
+<!-- Doctor 2: Dr. Ankur Jain -->
+<div class="border border-ink/10 rounded-[28px] p-8 md:p-10 bg-ink/5 flex flex-col justify-between relative overflow-hidden group">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<img alt="Dr. Ankur Jain" class="w-16 h-16 rounded-full object-cover object-top border-2 border-ink/15 shadow-md flex-shrink-0" src="/public/dr_ankur_portrait.jpg"/>
+<div>
+<h3 class="font-serif font-semibold text-2xl text-ink reveal-anim">Dr. Ankur Jain</h3>
+<p class="text-xs uppercase tracking-widest text-inkmute mt-1">Internal Medicine &amp; Critical Care Specialist</p>
+</div>
+</div>
+<p class="text-inkmute text-[15.5px] leading-relaxed mb-8 reveal-anim">
+                  Dr. Ankur Jain is a renowned specialist in Internal Medicine, General Physician care, Critical Care (Intensivist), Cardiology/Diabetology, and Rheumatology. Dedicated to evidence-based practice, Dr. Ankur Jain ensures every patient achieves lasting physiological balance and vital health.
+                </p>
+</div>
+<div class="border-t border-ink/10 pt-6 flex flex-wrap justify-between items-center gap-4 text-sm text-ink font-medium">
+<div>
+<span class="block">Specialties: Internal Medicine, Cardiology/Diabetology &amp; Critical Care</span>
+<span class="text-xs text-inkmute uppercase tracking-wider">M.B.B.S, M.D (Intensivist &amp; Physician)</span>
+</div>
+<a class="inline-flex items-center gap-2 bg-ink text-cream px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-magenta transition-colors hover-scale" href="dr-ankur.html">
+                  Know More
+                  <svg fill="currentColor" height="12" viewbox="0 0 256 256" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Patient Testimonials Bento Grid -->
+
+<!-- Values Grid -->
+
+<!-- CTA Band -->
+
+<!-- Footer -->
+<footer class="bg-ink text-cream">
+<div class="max-w-[1240px] mx-auto px-6 md:px-10 pt-20 pb-10">
+<div class="border-t border-cream/12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-cream/45 text-xs">© 2026 Medshine Clinic. All rights reserved.</div>
+</div>
+</div>
+</footer>
+<script src="/src/main.js" type="module"></script>
+<script src="/src/transition.js" type="module"></script>
+<script src="/src/animations.js" type="module"></script>
+<!-- Floating WhatsApp Button -->
+<a aria-label="Chat on WhatsApp" class="whatsapp-float" href="https://wa.me/917506251933" target="_blank">
+<svg fill="currentColor" height="32" viewbox="0 0 448 512" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
+</svg>
+<!-- Tooltip -->
+<span class="absolute right-full mr-4 bg-ink text-cream text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-sans">
+        Chat with us
+      </span>
+</a>
+</body>
+</html>
