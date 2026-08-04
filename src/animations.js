@@ -1,24 +1,36 @@
-// Intersection Observer for scroll animations
-const observerOptions = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.15 // Trigger when 15% of the element is visible
-};
+function initScrollAnimations() {
+  const observerOptions = {
+    root: null,
+    rootMargin: '50px',
+    threshold: 0.05
+  };
 
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // Add the visible class to trigger the CSS transition
-      entry.target.classList.add('is-visible');
-      // Stop observing once it's visible so it doesn't animate out when scrolling back up
-      observer.unobserve(entry.target);
-    }
-  });
-}, observerOptions);
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
 
-// Select all elements that have a reveal class
-const revealElements = document.querySelectorAll('.reveal-anim, .reveal-fade, .reveal-slide-left');
+  const revealElements = document.querySelectorAll('.reveal-anim, .reveal-fade, .reveal-slide-left');
+  revealElements.forEach(el => observer.observe(el));
+  
+  // Failsafe: if IntersectionObserver fails to fire for elements already in viewport on load, force them visible after a short delay
+  setTimeout(() => {
+    document.querySelectorAll('.reveal-anim, .reveal-fade, .reveal-slide-left').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        el.classList.add('is-visible');
+      }
+    });
+  }, 100);
+}
 
-revealElements.forEach(el => {
-  observer.observe(el);
-});
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initScrollAnimations);
+} else {
+  initScrollAnimations();
+}
+
