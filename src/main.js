@@ -171,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
       <nav class="flex flex-col">
         <a href="index.html" class="mobile-drawer-link"><span>Home</span></a>
-        <a href="about.html" class="mobile-drawer-link"><span>About Us</span></a>
         <a href="treatments.html" class="mobile-drawer-link"><span>Treatments</span></a>
         <a href="blog.html" class="mobile-drawer-link"><span>Blog</span></a>
         <a href="contact.html" class="mobile-drawer-link"><span>Contact</span></a>
@@ -214,7 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Global Appointment Popup Modal
 document.addEventListener('DOMContentLoaded', () => {
-  const lastPopupTime = sessionStorage.getItem('popupShownTime');
   const now = new Date().getTime();
   
   const modalHTML = `
@@ -267,18 +265,41 @@ document.addEventListener('DOMContentLoaded', () => {
   
   document.getElementById('popup-booking-form').addEventListener('submit', (e) => {
     e.preventDefault();
-    const btn = e.target.querySelector('button');
-    btn.textContent = 'Request Sent!';
+    
+    // Get form values
+    const form = e.target;
+    const name = form.querySelector('input[type="text"]').value;
+    const phone = form.querySelector('input[type="tel"]').value;
+    const doctorSelect = form.querySelector('select');
+    const doctor = doctorSelect.options[doctorSelect.selectedIndex].text;
+    
+    // Construct WhatsApp Message
+    const whatsappNumber = "917506251933";
+    const message = `Hello Medshine Clinic! I would like to request an appointment.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Department:* ${doctor}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    // Provide UI feedback and close modal
+    const btn = form.querySelector('button');
+    btn.textContent = 'Opening WhatsApp...';
     btn.classList.add('bg-inkmute');
     btn.classList.remove('bg-ink', 'hover:bg-magentadeep');
-    setTimeout(closeModal, 1500);
+    setTimeout(() => {
+      closeModal();
+      // Reset button text for next time
+      setTimeout(() => {
+        btn.textContent = 'Request Appointment';
+        btn.classList.remove('bg-inkmute');
+        btn.classList.add('bg-ink', 'hover:bg-magentadeep');
+        form.reset();
+      }, 500);
+    }, 1500);
   });
   
-  // Show popup on navigation with a 1 minute cooldown to prevent spamming
-  if (!lastPopupTime || (now - lastPopupTime > 60000)) {
-    setTimeout(() => {
-      openModal();
-      sessionStorage.setItem('popupShownTime', now);
-    }, 1200);
-  }
+  // Show popup on every navigation without a cooldown
+  setTimeout(() => {
+    openModal();
+  }, 1200);
 });

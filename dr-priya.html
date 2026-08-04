@@ -74,19 +74,19 @@
 </nav>
 <!-- Doctor Hero Section -->
 <section class="max-w-[1240px] mx-auto px-6 md:px-10 pt-32 pb-20">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-<div class="md:col-span-5">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center stagger-group">
+<div class="md:col-span-5 reveal-anim">
 <div class="relative rounded-[32px] overflow-hidden aspect-[4/5] bg-ink/5 border border-ink/10 shadow-xl">
-<img alt="Dr. Priya Jain" class="w-full h-full object-cover contrast-105" src="public/headshot-3.jpg"/>
+<img alt="Dr. Priya Jain" class="w-full h-full object-cover contrast-105 reveal-fade" src="public/headshot-3.jpg"/>
 <div class="absolute bottom-4 left-4 right-4 bg-cream/90 backdrop-blur-md p-4 rounded-2xl border border-ink/10">
 <span class="text-xs uppercase tracking-widest text-ink font-semibold block">MBBS, FFAC (Fellowships)</span>
 <span class="text-xs text-inkmute">Skin Specialist &amp; Aesthetic Physician</span>
 </div>
 </div>
 </div>
-<div class="md:col-span-7">
+<div class="md:col-span-7 reveal-anim">
 <span class="text-magenta uppercase text-xs tracking-[0.28em] font-semibold block mb-4">Medical Specialist Profile</span>
-<h1 class="font-serif font-medium leading-[0.98] tracking-tight text-ink mb-6 reveal-anim" style="font-size: clamp(2.8rem, 6.5vw, 5.2rem);">
+<h1 class="font-serif font-medium leading-[0.98] tracking-tight text-ink mb-6 reveal-anim reveal-fade" style="font-size: clamp(2.8rem, 6.5vw, 5.2rem);">
                 Dr. Priya <em class="font-light italic text-inkmute">Jain</em>
 </h1>
 <p class="text-ink text-lg md:text-xl font-serif italic mb-8 leading-relaxed max-w-[36ch] border-l-2 border-ink/20 pl-6">
@@ -99,140 +99,32 @@
 <a class="bg-ink text-cream px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider hover:bg-magenta transition-all hover-scale" href="contact.html">
                   Book with Dr. Priya Jain
                 </a>
-<a class="border border-ink/20 text-ink px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider hover:bg-ink/5 transition-all" href="#specialties">
+<a class="border border-ink/20 text-ink px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider hover:bg-ink/5 transition-all hover-scale" href="#specialties">
                   View Specialties
                 </a>
 </div>
 </div>
 </div>
 </section>
-
-
-
 <!-- Image Slider Section -->
-<section class="max-w-[100vw] overflow-hidden mb-28 py-6 relative" id="hero-slider-section">
-  <!-- Gradient Fades for edges -->
-  <div class="absolute inset-y-0 left-0 w-12 md:w-32 bg-gradient-to-r from-cream to-transparent z-10 pointer-events-none"></div>
-  <div class="absolute inset-y-0 right-0 w-12 md:w-32 bg-gradient-to-l from-cream to-transparent z-10 pointer-events-none"></div>
-  
-  <div class="flex overflow-hidden" id="smooth-slider-container">
-    <div class="flex gap-4 md:gap-6 pr-4 md:pr-6 flex-none items-center" id="smooth-slider-track" style="will-change: transform;">
-      
-      <!-- Slide 1 -->
-      <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-        <img src="public/clinic-room.jpg" alt="Clinic Interior" class="w-full h-full object-cover" />
-      </div>
-      
-      <!-- Slide 2 -->
-      <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-        <img src="public/laser-machine.jpg" alt="Laser Machine" class="w-full h-full object-cover" />
-      </div>
-      
-      <!-- Slide 3 -->
-      <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-        <img src="public/product-shelf.jpg" alt="Product Shelf" class="w-full h-full object-cover" />
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-        <img src="public/face-exam.PNG" alt="Face Exam" class="w-full h-full object-cover" />
-      </div>
-
-      <!-- Slide 5 -->
-      <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-        <img src="public/hair-treatment.PNG" alt="Hair Treatment" class="w-full h-full object-cover" />
-      </div>
-
-      <!-- Slide 6 -->
-      <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-        <img src="public/desk-consult.PNG" alt="Consultation" class="w-full h-full object-cover" />
-      </div>
-      
-      <!-- Duplicates for seamless loop -->
-      <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-        <img src="public/clinic-room.jpg" alt="Clinic Interior" class="w-full h-full object-cover" />
-      </div>
-      <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-        <img src="public/laser-machine.jpg" alt="Laser Machine" class="w-full h-full object-cover" />
-      </div>
-      <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-        <img src="public/product-shelf.jpg" alt="Product Shelf" class="w-full h-full object-cover" />
-      </div>
-      <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-        <img src="public/face-exam.PNG" alt="Face Exam" class="w-full h-full object-cover" />
-      </div>
-      <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-        <img src="public/hair-treatment.PNG" alt="Hair Treatment" class="w-full h-full object-cover" />
-      </div>
-      <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-        <img src="public/desk-consult.PNG" alt="Consultation" class="w-full h-full object-cover" />
-      </div>
-      
-    </div>
-  </div>
-  </div>
-</section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const track = document.getElementById("smooth-slider-track");
-    const container = document.getElementById("hero-slider-section");
-    if (!track || !container) return;
-    
-    let speed = 1.2; // base pixels per frame
-    let currentSpeed = speed;
-    let scrollPos = 0;
-    let isHovered = false;
-    
-    container.addEventListener("mouseenter", () => { isHovered = true; });
-    container.addEventListener("mouseleave", () => { isHovered = false; });
-    // For touch devices
-    container.addEventListener("touchstart", () => { isHovered = true; });
-    container.addEventListener("touchend", () => { isHovered = false; });
-    
-    function animate() {
-      if (isHovered) {
-        currentSpeed = currentSpeed * 0.92; // smooth deceleration
-      } else {
-        currentSpeed = currentSpeed + (speed - currentSpeed) * 0.08; // smooth acceleration
-      }
-      
-      scrollPos -= currentSpeed;
-      
-      // The track width is doubled, we reset at exactly half the track width
-      const totalWidth = track.scrollWidth;
-      const maxScroll = totalWidth / 2;
-      
-      if (Math.abs(scrollPos) >= maxScroll) {
-        scrollPos += maxScroll;
-      }
-      
-      track.style.transform = `translate3d(${scrollPos}px, 0, 0)`;
-      requestAnimationFrame(animate);
-    }
-    
-    requestAnimationFrame(animate);
-  });
-</script>
-
 
 
 <!-- Biography & Credentials Grid -->
 <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-28 border-t border-ink/15 pt-20">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-<div class="border-l border-ink/15 pl-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 stagger-group">
+<div class="border-l border-ink/15 pl-8 reveal-anim">
 <span class="font-serif text-3xl text-ink font-medium block mb-3">Academic Excellence</span>
 <p class="text-inkmute text-sm leading-relaxed">
                 Completed her Bachelor of Medicine and Bachelor of Surgery (MBBS) with clinical honors, followed by prestigious FFAC Fellowships, establishing her as an expert Skin Specialist and Aesthetic Physician.
               </p>
 </div>
-<div class="border-l border-ink/15 pl-8">
+<div class="border-l border-ink/15 pl-8 reveal-anim">
 <span class="font-serif text-3xl text-ink font-medium block mb-3">Clinical Philosophy</span>
 <p class="text-inkmute text-sm leading-relaxed">
                 Pioneered the "Diagnostic First" protocol at Medshine Clinic. Every aesthetic treatment plan begins with a comprehensive evaluation of skin barrier health, lifestyle stressors, and underlying inflammatory markers.
               </p>
 </div>
-<div class="border-l border-ink/15 pl-8">
+<div class="border-l border-ink/15 pl-8 reveal-anim">
 <span class="font-serif text-3xl text-ink font-medium block mb-3">15+ Years Impact</span>
 <p class="text-inkmute text-sm leading-relaxed">
                 Has successfully managed over 10,000+ complex dermatological cases, ranging from chronic cystic acne and melasma to advanced structural aging and laser scar revision.
@@ -242,8 +134,8 @@
 </section>
 <!-- Specialties & Procedures -->
 <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-28 scroll-mt-24" id="specialties">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="border border-ink/10 rounded-[24px] p-8 bg-ink/5 hover:border-ink/30 transition-all">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-group">
+<div class="border border-ink/10 rounded-[24px] p-8 bg-ink/5 hover:border-ink/30 transition-all reveal-anim">
 <span class="text-xs font-semibold uppercase tracking-widest text-inkmute block mb-3">01 / Laser Medicine</span>
 <h3 class="font-serif text-2xl font-semibold text-ink mb-3">Advanced Laser Rejuvenation</h3>
 <p class="text-inkmute text-sm leading-relaxed mb-6">
@@ -255,7 +147,7 @@
 <li>• Vascular &amp; Redness Therapy</li>
 </ul>
 </div>
-<div class="border border-ink/10 rounded-[24px] p-8 bg-ink/5 hover:border-ink/30 transition-all">
+<div class="border border-ink/10 rounded-[24px] p-8 bg-ink/5 hover:border-ink/30 transition-all reveal-anim">
 <span class="text-xs font-semibold uppercase tracking-widest text-inkmute block mb-3">02 / Medical Skin</span>
 <h3 class="font-serif text-2xl font-semibold text-ink mb-3">Clinical Acne &amp; Scar Revision</h3>
 <p class="text-inkmute text-sm leading-relaxed mb-6">
@@ -267,7 +159,7 @@
 <li>• Post-Inflammatory Hyperpigmentation (PIH) Cure</li>
 </ul>
 </div>
-<div class="border border-ink/10 rounded-[24px] p-8 bg-ink/5 hover:border-ink/30 transition-all">
+<div class="border border-ink/10 rounded-[24px] p-8 bg-ink/5 hover:border-ink/30 transition-all reveal-anim">
 <span class="text-xs font-semibold uppercase tracking-widest text-inkmute block mb-3">03 / Anti-Aging</span>
 <h3 class="font-serif text-2xl font-semibold text-ink mb-3">Non-Surgical Facial Contouring</h3>
 <p class="text-inkmute text-sm leading-relaxed mb-6">
@@ -279,7 +171,7 @@
 <li>• Dynamic Wrinkle Relaxation</li>
 </ul>
 </div>
-<div class="border border-ink/10 rounded-[24px] p-8 bg-ink/5 hover:border-ink/30 transition-all">
+<div class="border border-ink/10 rounded-[24px] p-8 bg-ink/5 hover:border-ink/30 transition-all reveal-anim">
 <span class="text-xs font-semibold uppercase tracking-widest text-inkmute block mb-3">04 / Regenerative</span>
 <h3 class="font-serif text-2xl font-semibold text-ink mb-3">Cellular Skin Therapies</h3>
 <p class="text-inkmute text-sm leading-relaxed mb-6">
@@ -304,19 +196,19 @@
 <div class="flex-1 h-px bg-cream/15"></div>
 <span class="text-cream/70 text-sm">Skin Specialist &amp; Aesthetic Physician</span>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-<div class="md:col-span-5">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center stagger-group">
+<div class="md:col-span-5 reveal-anim">
 <div class="relative rounded-[32px] overflow-hidden aspect-[4/5] bg-white/5 border border-cream/10 shadow-xl">
-<img alt="Dr. Priya Jain" class="w-full h-full object-cover" src="public/headshot-hover.jpg"/>
+<img alt="Dr. Priya Jain" class="w-full h-full object-cover reveal-fade" src="public/headshot-hover.jpg"/>
 <div class="absolute bottom-4 left-4 right-4 bg-ink/90 backdrop-blur-md p-4 rounded-2xl border border-cream/10">
 <span class="text-xs uppercase tracking-widest text-cream font-semibold block">MBBS, FFAC (Fellowships)</span>
 <span class="text-xs text-cream/70">Skin Specialist &amp; Aesthetic Physician</span>
 </div>
 </div>
 </div>
-<div class="md:col-span-7">
+<div class="md:col-span-7 reveal-anim">
 <span class="text-cream uppercase text-xs tracking-[0.28em] font-semibold block mb-4">Medical Specialist Profile</span>
-<h1 class="font-serif font-medium leading-[0.98] tracking-tight text-cream mb-6 reveal-anim" style="font-size: clamp(2.8rem, 6.5vw, 5.2rem);">
+<h1 class="font-serif font-medium leading-[0.98] tracking-tight text-cream mb-6 reveal-anim reveal-fade" style="font-size: clamp(2.8rem, 6.5vw, 5.2rem);">
                 Dr. Priya <em class="font-light italic text-cream/70">Jain</em>
 </h1>
 <p class="text-cream text-lg md:text-xl font-serif italic mb-8 leading-relaxed max-w-[36ch] border-l-2 border-cream/20 pl-6">
@@ -329,7 +221,7 @@
 <a class="bg-cream text-ink px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider hover:bg-emerald-400 transition-all hover-scale" href="contact.html">
                   Book with Dr. Priya Jain
                 </a>
-<a class="border border-cream/20 text-cream px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider hover:bg-white/5 transition-all" href="#specialties">
+<a class="border border-cream/20 text-cream px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider hover:bg-white/5 transition-all hover-scale" href="#specialties">
                   View Specialties
                 </a>
 </div>
@@ -338,20 +230,20 @@
 </section>
 <!-- Biography & Credentials Grid (Dark) -->
 <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-28 border-t border-cream/15 pt-20">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-<div class="border-l border-cream/15 pl-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 stagger-group">
+<div class="border-l border-cream/15 pl-8 reveal-anim">
 <span class="font-serif text-3xl text-cream font-medium block mb-3">Academic Excellence</span>
 <p class="text-cream/70 text-sm leading-relaxed">
                 Completed her Bachelor of Medicine and Bachelor of Surgery (MBBS) with clinical honors, followed by prestigious FFAC Fellowships, establishing her as an expert Skin Specialist and Aesthetic Physician.
               </p>
 </div>
-<div class="border-l border-cream/15 pl-8">
+<div class="border-l border-cream/15 pl-8 reveal-anim">
 <span class="font-serif text-3xl text-cream font-medium block mb-3">Clinical Philosophy</span>
 <p class="text-cream/70 text-sm leading-relaxed">
                 Pioneered the "Diagnostic First" protocol at Medshine Clinic. Every aesthetic treatment plan begins with a comprehensive evaluation of skin barrier health, lifestyle stressors, and underlying inflammatory markers.
               </p>
 </div>
-<div class="border-l border-cream/15 pl-8">
+<div class="border-l border-cream/15 pl-8 reveal-anim">
 <span class="font-serif text-3xl text-cream font-medium block mb-3">15+ Years Impact</span>
 <p class="text-cream/70 text-sm leading-relaxed">
                 Has successfully managed over 10,000+ complex dermatological cases, ranging from chronic cystic acne and melasma to advanced structural aging and laser scar revision.
@@ -361,8 +253,8 @@
 </section>
 <!-- Specialties & Procedures (Dark) -->
 <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-28 scroll-mt-24">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="border border-cream/10 rounded-[24px] p-8 bg-white/5 hover:border-cream/30 transition-all">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-group">
+<div class="border border-cream/10 rounded-[24px] p-8 bg-white/5 hover:border-cream/30 transition-all reveal-anim">
 <span class="text-xs font-semibold uppercase tracking-widest text-cream/70 block mb-3">01 / Laser Medicine</span>
 <h3 class="font-serif text-2xl font-semibold text-cream mb-3">Advanced Laser Rejuvenation</h3>
 <p class="text-cream/70 text-sm leading-relaxed mb-6">
@@ -374,7 +266,7 @@
 <li>• Vascular &amp; Redness Therapy</li>
 </ul>
 </div>
-<div class="border border-cream/10 rounded-[24px] p-8 bg-white/5 hover:border-cream/30 transition-all">
+<div class="border border-cream/10 rounded-[24px] p-8 bg-white/5 hover:border-cream/30 transition-all reveal-anim">
 <span class="text-xs font-semibold uppercase tracking-widest text-cream/70 block mb-3">02 / Medical Skin</span>
 <h3 class="font-serif text-2xl font-semibold text-cream mb-3">Clinical Acne &amp; Scar Revision</h3>
 <p class="text-cream/70 text-sm leading-relaxed mb-6">
@@ -386,7 +278,7 @@
 <li>• Post-Inflammatory Hyperpigmentation (PIH) Cure</li>
 </ul>
 </div>
-<div class="border border-cream/10 rounded-[24px] p-8 bg-white/5 hover:border-cream/30 transition-all">
+<div class="border border-cream/10 rounded-[24px] p-8 bg-white/5 hover:border-cream/30 transition-all reveal-anim">
 <span class="text-xs font-semibold uppercase tracking-widest text-cream/70 block mb-3">03 / Anti-Aging</span>
 <h3 class="font-serif text-2xl font-semibold text-cream mb-3">Non-Surgical Facial Contouring</h3>
 <p class="text-cream/70 text-sm leading-relaxed mb-6">
@@ -398,7 +290,7 @@
 <li>• Dynamic Wrinkle Relaxation</li>
 </ul>
 </div>
-<div class="border border-cream/10 rounded-[24px] p-8 bg-white/5 hover:border-cream/30 transition-all">
+<div class="border border-cream/10 rounded-[24px] p-8 bg-white/5 hover:border-cream/30 transition-all reveal-anim">
 <span class="text-xs font-semibold uppercase tracking-widest text-cream/70 block mb-3">04 / Regenerative</span>
 <h3 class="font-serif text-2xl font-semibold text-cream mb-3">Cellular Skin Therapies</h3>
 <p class="text-cream/70 text-sm leading-relaxed mb-6">
@@ -415,14 +307,14 @@
 <!-- CTA Band (Dark) -->
 <section class="max-w-[1240px] mx-auto px-6 md:px-10 mb-16">
 <div class="bg-cream text-ink rounded-[28px] p-10 md:p-20 relative overflow-hidden">
-<div class="absolute inset-0 grid-texture"></div>
+<div class="absolute inset-0 grid-texture stagger-group"></div>
 <div class="relative z-10">
 <span class="text-ink/75 uppercase text-xs tracking-[0.28em] font-semibold block mb-8">Personalized Consultation</span>
-<h2 class="font-serif font-medium leading-[0.98] tracking-tight mb-12 max-w-[18ch] reveal-anim" style="font-size: clamp(2.4rem, 6vw, 5.2rem);">
+<h2 class="font-serif font-medium leading-[0.98] tracking-tight mb-12 max-w-[18ch] reveal-anim reveal-fade" style="font-size: clamp(2.4rem, 6vw, 5.2rem);">
                 Ready to begin your journey with <em class="font-light italic text-ink/90">Dr. Priya Jain?</em>
 </h2>
 <div class="flex flex-wrap items-center gap-4">
-<a class="bg-ink text-cream px-8 py-4 rounded-full font-medium" href="contact.html">
+<a class="bg-ink text-cream px-8 py-4 rounded-full font-medium hover-scale" href="contact.html">
                   Book your appointment
                 </a>
 </div>
@@ -430,92 +322,82 @@
 </div>
 </section>
 <!-- Footer (Dark) -->
-
 </div> <!-- End Reveal Layer -->
 <!-- End Page Wrapper -->
-
-    <!-- Footer -->
-    
-    <!-- Footer -->
-    <footer class="bg-ink/5 border-t border-ink/10 text-ink relative overflow-hidden mt-20">
-      <div class="max-w-[1240px] mx-auto px-6 md:px-10 pt-24 pb-10">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-16 relative z-10">
-          
-          <!-- Brand Column -->
-          <div class="md:col-span-4 lg:col-span-4">
-            <a href="index.html" class="flex items-center gap-3 mb-6">
-              <div class="w-8 h-8 rounded-full bg-ink flex items-center justify-center text-cream">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm43.81,68.19-28.28,66a8,8,0,0,1-3.72,3.72l-66,28.28a8,8,0,0,1-10.36-10.36l28.28-66a8,8,0,0,1,3.72-3.72l66-28.28A8,8,0,0,1,171.81,92.19ZM128,112a16,16,0,1,0,16,16A16,16,0,0,0,128,112Z"></path></svg>
-              </div>
-              <span class="font-serif font-semibold tracking-tight text-2xl text-ink">Medshine</span>
-            </a>
-            <p class="text-inkmute text-sm leading-relaxed max-w-[30ch] mb-8">
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-ink/5 border-t border-ink/10 text-ink relative overflow-hidden mt-20">
+<div class="max-w-[1240px] mx-auto px-6 md:px-10 pt-24 pb-10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-16 relative z-10 stagger-group">
+<!-- Brand Column -->
+<div class="md:col-span-4 lg:col-span-4 reveal-anim">
+<a class="flex items-center gap-3 mb-6" href="index.html">
+<div class="w-8 h-8 rounded-full bg-ink flex items-center justify-center text-cream">
+<svg fill="currentColor" height="18" viewbox="0 0 256 256" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm43.81,68.19-28.28,66a8,8,0,0,1-3.72,3.72l-66,28.28a8,8,0,0,1-10.36-10.36l28.28-66a8,8,0,0,1,3.72-3.72l66-28.28A8,8,0,0,1,171.81,92.19ZM128,112a16,16,0,1,0,16,16A16,16,0,0,0,128,112Z"></path></svg>
+</div>
+<span class="font-serif font-semibold tracking-tight text-2xl text-ink">Medshine</span>
+</a>
+<p class="text-inkmute text-sm leading-relaxed max-w-[30ch] mb-8">
               Where clinical excellence meets aesthetic artistry. We provide comprehensive skin, hair, and internal health solutions under one roof.
             </p>
-            <!-- Socials -->
-            <div class="flex items-center gap-4">
-              <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full border border-ink/20 flex items-center justify-center text-ink/70 hover:bg-ink hover:text-cream transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
-              </a>
-              <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full border border-ink/20 flex items-center justify-center text-ink/70 hover:bg-ink hover:text-cream transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg>
-              </a>
-              <a href="https://wa.me/917506251933" aria-label="WhatsApp" class="w-10 h-10 rounded-full border border-ink/20 flex items-center justify-center text-ink/70 hover:bg-ink hover:text-cream transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23-7.7,11.55a8,8,0,0,0-.93,7.67c3.92,10.93,12.72,19.73,23.65,23.65a8,8,0,0,0,7.67-.93l11.55-7.7,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L44,214.6l11.08-33.26a8,8,0,0,0-.67-6.54A88,88,0,1,1,128,216Z"></path></svg>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Main Treatments -->
-          <div class="md:col-span-3 lg:col-span-3">
-            <h4 class="font-serif font-semibold text-ink text-lg mb-6">Main Treatments</h4>
-            <ul class="space-y-3 text-sm text-inkmute">
-              <li><a href="treatments.html" class="hover:text-ink transition-colors">Laser Hair Reduction</a></li>
-              <li><a href="treatments.html" class="hover:text-ink transition-colors">Acne & Scar Treatments</a></li>
-              <li><a href="treatments.html" class="hover:text-ink transition-colors">Anti-Aging & Injectables</a></li>
-              <li><a href="treatments.html" class="hover:text-ink transition-colors">Regenerative Medicine</a></li>
-              <li><a href="treatments.html" class="hover:text-ink transition-colors">Hair Restoration</a></li>
-            </ul>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="md:col-span-2 lg:col-span-2">
-            <h4 class="font-serif font-semibold text-ink text-lg mb-6">Explore</h4>
-            <ul class="space-y-3 text-sm text-inkmute">
-              <li><a href="dr-ankur.html" class="hover:text-ink transition-colors">Our Team</a></li>
-              <li><a href="treatments.html" class="hover:text-ink transition-colors">All Services</a></li>
-              <li><a href="blog.html" class="hover:text-ink transition-colors">Health Blog</a></li>
-              <li><a href="contact.html" class="hover:text-ink transition-colors">Book Online</a></li>
-            </ul>
-          </div>
-          
-          <!-- Contact Info -->
-          <div class="md:col-span-3 lg:col-span-3">
-            <h4 class="font-serif font-semibold text-ink text-lg mb-6">Contact Us</h4>
-            <ul class="space-y-4 text-sm text-inkmute">
-              <li class="flex gap-3">
-                <svg class="flex-shrink-0 text-ink mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z"></path></svg>
-                <span>Medii Derma Shine, Shastri Nagar, Goregaon West, Mumbai, Maharashtra 400104</span>
-              </li>
-              <li class="flex gap-3 items-center">
-                <svg class="flex-shrink-0 text-ink" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.41-38.83-38.83l20.78-24.34a8.12,8.12,0,0,0,.56-.75,16,16,0,0,0,1.4-15.17l-.06-.13L97.66,33.64m0,0A16,16,0,0,0,82,24H39.86A15.92,15.92,0,0,0,24,39.69C27.23,121.72,94.28,188.77,176.31,212A15.92,15.92,0,0,0,192,196.14V154a16,16,0,0,0-9.63-14.63Z"></path></svg>
-                <a href="tel:+917506251933" class="hover:text-ink transition-colors">+91 75062 51933</a>
-              </li>
-              <li class="flex gap-3 items-center">
-                <svg class="flex-shrink-0 text-ink" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM224,192H32V74.89l90.58,83.08a8,8,0,0,0,10.84,0L224,74.89Z"></path></svg>
-                <a href="mailto:info@medshineclinic.com" class="hover:text-ink transition-colors">info@medshineclinic.com</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="border-t border-ink/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 relative z-10">
-          <div class="text-ink/50 text-xs">&copy; 2026 Medshine Clinic. All rights reserved.</div>
-        </div>
-      </div>
-    </footer>
-
-
+<!-- Socials -->
+<div class="flex items-center gap-4">
+<a aria-label="Instagram" class="w-10 h-10 rounded-full border border-ink/20 flex items-center justify-center text-ink/70 hover:bg-ink hover:text-cream transition-colors hover-scale" href="#">
+<svg fill="currentColor" height="18" viewbox="0 0 256 256" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
+</a>
+<a aria-label="Facebook" class="w-10 h-10 rounded-full border border-ink/20 flex items-center justify-center text-ink/70 hover:bg-ink hover:text-cream transition-colors hover-scale" href="#">
+<svg fill="currentColor" height="18" viewbox="0 0 256 256" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg>
+</a>
+<a aria-label="WhatsApp" class="w-10 h-10 rounded-full border border-ink/20 flex items-center justify-center text-ink/70 hover:bg-ink hover:text-cream transition-colors hover-scale" href="https://wa.me/917506251933">
+<svg fill="currentColor" height="18" viewbox="0 0 256 256" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23-7.7,11.55a8,8,0,0,0-.93,7.67c3.92,10.93,12.72,19.73,23.65,23.65a8,8,0,0,0,7.67-.93l11.55-7.7,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L44,214.6l11.08-33.26a8,8,0,0,0-.67-6.54A88,88,0,1,1,128,216Z"></path></svg>
+</a>
+</div>
+</div>
+<!-- Main Treatments -->
+<div class="md:col-span-3 lg:col-span-3 reveal-anim">
+<h4 class="font-serif font-semibold text-ink text-lg mb-6">Main Treatments</h4>
+<ul class="space-y-3 text-sm text-inkmute">
+<li><a class="hover:text-ink transition-colors" href="treatments.html">Laser Hair Reduction</a></li>
+<li><a class="hover:text-ink transition-colors" href="treatments.html">Acne &amp; Scar Treatments</a></li>
+<li><a class="hover:text-ink transition-colors" href="treatments.html">Anti-Aging &amp; Injectables</a></li>
+<li><a class="hover:text-ink transition-colors" href="treatments.html">Regenerative Medicine</a></li>
+<li><a class="hover:text-ink transition-colors" href="treatments.html">Hair Restoration</a></li>
+</ul>
+</div>
+<!-- Quick Links -->
+<div class="md:col-span-2 lg:col-span-2 reveal-anim">
+<h4 class="font-serif font-semibold text-ink text-lg mb-6">Explore</h4>
+<ul class="space-y-3 text-sm text-inkmute">
+<li><a class="hover:text-ink transition-colors" href="dr-ankur.html">Our Team</a></li>
+<li><a class="hover:text-ink transition-colors" href="treatments.html">All Services</a></li>
+<li><a class="hover:text-ink transition-colors" href="blog.html">Health Blog</a></li>
+<li><a class="hover:text-ink transition-colors" href="contact.html">Book Online</a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div class="md:col-span-3 lg:col-span-3 reveal-anim">
+<h4 class="font-serif font-semibold text-ink text-lg mb-6">Contact Us</h4>
+<ul class="space-y-4 text-sm text-inkmute">
+<li class="flex gap-3">
+<svg class="flex-shrink-0 text-ink mt-0.5" fill="currentColor" height="16" viewbox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z"></path></svg>
+<span>Medii Derma Shine, Shastri Nagar, Goregaon West, Mumbai, Maharashtra 400104</span>
+</li>
+<li class="flex gap-3 items-center">
+<svg class="flex-shrink-0 text-ink" fill="currentColor" height="16" viewbox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.41-38.83-38.83l20.78-24.34a8.12,8.12,0,0,0,.56-.75,16,16,0,0,0,1.4-15.17l-.06-.13L97.66,33.64m0,0A16,16,0,0,0,82,24H39.86A15.92,15.92,0,0,0,24,39.69C27.23,121.72,94.28,188.77,176.31,212A15.92,15.92,0,0,0,192,196.14V154a16,16,0,0,0-9.63-14.63Z"></path></svg>
+<a class="hover:text-ink transition-colors" href="tel:+917506251933">+91 75062 51933</a>
+</li>
+<li class="flex gap-3 items-center">
+<svg class="flex-shrink-0 text-ink" fill="currentColor" height="16" viewbox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM224,192H32V74.89l90.58,83.08a8,8,0,0,0,10.84,0L224,74.89Z"></path></svg>
+<a class="hover:text-ink transition-colors" href="mailto:info@medshineclinic.com">info@medshineclinic.com</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-ink/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 relative z-10">
+<div class="text-ink/50 text-xs">© 2026 Medshine Clinic. All rights reserved.</div>
+</div>
+</div>
+</footer>
 <script src="/src/main.js" type="module"></script>
 <script src="/src/transition.js" type="module"></script>
 <script src="/src/animations.js" type="module"></script>
