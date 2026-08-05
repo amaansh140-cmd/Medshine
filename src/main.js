@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Create Hamburger Button
   const menuBtn = document.createElement('button');
   menuBtn.id = 'mobile-menu-btn';
-  menuBtn.className = 'mobile-menu-btn flex items-center justify-center px-4 py-2 rounded-md border border-ink/20 bg-ink/5 text-ink hover:bg-ink/10 focus:outline-none ml-2 text-sm font-semibold tracking-wide transition-colors';
+  menuBtn.className = 'mobile-menu-btn flex items-center justify-center p-2 rounded-md border border-ink/20 text-ink hover:bg-ink/5 focus:outline-none ml-2 transition-colors';
   menuBtn.setAttribute('aria-label', 'Open Menu');
-  menuBtn.innerHTML = 'Menu';
+  menuBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
 
   // Insert hamburger button right next to the CTA button or inside navInner
   const ctaBtn = navInner.querySelector('a[href="contact.html"]');
