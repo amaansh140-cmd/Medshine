@@ -98,8 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const modalHTML = `
     <div id="booking-modal" class="fixed inset-0 z-[100] flex items-center justify-center pointer-events-none opacity-0 transition-opacity duration-500">
-      <div class="absolute inset-0 bg-ink/40 backdrop-blur-sm modal-bg pointer-events-auto cursor-pointer"></div>
-      <div class="relative bg-cream w-full max-w-md mx-4 rounded-3xl p-8 shadow-2xl border border-ink/10 transform scale-95 transition-transform duration-500 pointer-events-auto flex flex-col modal-content">
+      <div class="absolute inset-0 bg-ink/40 backdrop-blur-sm modal-bg cursor-pointer"></div>
+      <div class="relative bg-cream w-full max-w-md mx-4 rounded-3xl p-8 shadow-2xl border border-ink/10 transform scale-95 transition-transform duration-500 flex flex-col modal-content">
         <button id="close-modal" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-ink/5 hover:bg-ink/10 text-ink transition-colors cursor-pointer">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
