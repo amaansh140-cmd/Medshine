@@ -1,5 +1,3 @@
-
-
 // Universal Mobile & Tablet Navigation Drawer Initialization
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('nav');
@@ -7,6 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Find inner flex container of nav
   const navInner = nav.querySelector('.max-w-\\[1240px\\]') || nav.querySelector('.flex.items-center.justify-between') || nav;
+
+  // Set active state for navigation links
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const allNavLinks = nav.querySelectorAll('.desktop-nav .nav-link');
+  allNavLinks.forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (currentPath === linkPath || (currentPath.startsWith('treatment') && linkPath === 'treatments.html') || (currentPath === 'dr-ankur.html' && linkPath === 'team.html')) {
+      link.classList.remove('hover:text-ink', 'transition-colors');
+      link.classList.add('text-ink', 'font-medium');
+    }
+  });
 
   // Create Hamburger Button
   const menuBtn = document.createElement('button');
@@ -45,8 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
         </button>
       </div>
       <nav class="flex flex-col">
+        <a href="team.html" class="mobile-drawer-link"><span>Team</span></a>
         <a href="treatments.html" class="mobile-drawer-link"><span>Treatments</span></a>
-        <a href="blog.html" class="mobile-drawer-link"><span>Blog</span></a>
+        <a href="blog.html" class="mobile-drawer-link"><span>Blogs</span></a>
         <a href="contact.html" class="mobile-drawer-link"><span>Contact</span></a>
       </nav>
     </div>
