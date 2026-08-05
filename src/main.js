@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </button>
       </div>
       <nav class="flex flex-col">
-        <a href="index.html" class="mobile-drawer-link"><span>Home</span></a>
         <a href="treatments.html" class="mobile-drawer-link"><span>Treatments</span></a>
         <a href="blog.html" class="mobile-drawer-link"><span>Blog</span></a>
         <a href="contact.html" class="mobile-drawer-link"><span>Contact</span></a>
