@@ -84,6 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
   menuBtn.addEventListener('click', openDrawer);
   closeBtn.addEventListener('click', closeDrawer);
   backdrop.addEventListener('click', closeDrawer);
+  
+  // Close drawer when a link is clicked
+  const drawerLinks = drawer.querySelectorAll('.mobile-drawer-link');
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', closeDrawer);
+  });
 });
 
 // Global Appointment Popup Modal
