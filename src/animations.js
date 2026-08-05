@@ -34,3 +34,43 @@ if (document.readyState === 'loading') {
   initScrollAnimations();
 }
 
+
+
+// Number Counter Animation
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.counter-value');
+  const speed = 200; // The lower the slower
+
+  const animateCounter = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    
+    // Calculate increment step based on target size
+    const inc = target / speed;
+
+    if (count < target) {
+      counter.innerText = Math.ceil(count + inc);
+      setTimeout(() => animateCounter(counter), 10);
+    } else {
+      // For large numbers, format with commas
+      if (target >= 1000) {
+        counter.innerText = target.toLocaleString();
+      } else {
+        counter.innerText = target;
+      }
+    }
+  };
+
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => {
+    counterObserver.observe(counter);
+  });
+});

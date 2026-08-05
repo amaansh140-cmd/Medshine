@@ -707,3 +707,18 @@ img, video, svg {
 .animate-float {
   animation: floatUpAndDown 4s ease-in-out infinite;
 }
+
+
+/* Marquee Animation */
+.marquee-container {
+  display: flex;
+  width: max-content;
+  animation: scrollMarquee 25s linear infinite;
+}
+.marquee-container:hover {
+  animation-play-state: paused;
+}
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
