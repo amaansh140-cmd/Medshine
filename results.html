@@ -84,10 +84,10 @@
     
     <div class="relative w-full aspect-[4/3] rounded-[24px] overflow-hidden group/slider">
       <!-- After Image -->
-      <img src="/src/assets/after_1.jpg" alt="After Treatment" class="absolute inset-0 w-full h-full object-cover" />
+      <img src="/src/assets/after_1.jpg" alt="After Treatment" class="absolute inset-0 w-full h-full object-cover" style="object-position: 50% 60%;" />
       
       <!-- Before Image Container (clipped) -->
-      <img src="/src/assets/before_1.jpg" alt="Before Treatment" class="absolute inset-0 w-full h-full object-cover [clip-path:polygon(0_0,var(--split,50%)_0,var(--split,50%)_100%,0_100%)]" id="ba-image-1" />
+      <img src="/src/assets/before_1.jpg" alt="Before Treatment" class="absolute inset-0 w-full h-full object-cover [clip-path:polygon(0_0,var(--split,50%)_0,var(--split,50%)_100%,0_100%)]" id="ba-image-1" style="object-position: 50% 40%;" />
 
       <!-- Range Input for dragging -->
       <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" oninput="document.getElementById('ba-image-1').style.setProperty('--split', this.value + '%'); document.getElementById('ba-handle-1').style.left = this.value + '%';" />
