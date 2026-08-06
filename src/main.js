@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="team.html" class="mobile-drawer-link"><span>Team</span></a>
         <a href="treatments.html" class="mobile-drawer-link"><span>Treatments</span></a>
         <a href="blog.html" class="mobile-drawer-link"><span>Blogs</span></a>
+        <a href="reviews.html" class="mobile-drawer-link"><span>Reviews</span></a>
         <a href="contact.html" class="mobile-drawer-link"><span>Contact</span></a>
       </nav>
     </div>
