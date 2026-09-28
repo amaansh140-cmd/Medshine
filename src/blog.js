@@ -1,11 +1,11 @@
-const API_URL = 'http://localhost:3000/api';
+const API_URL = '/api';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const blogContainer = document.getElementById('blog-container');
     if (!blogContainer) return;
 
     try {
-        const response = await fetch(`${API_URL}/blogs`);
+        const response = await fetch(`${API_URL}/blogs.php`);
         const data = await response.json();
         
         if (!response.ok) {

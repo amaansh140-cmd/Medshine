@@ -1,5 +1,5 @@
-// Base URL for the Node.js API
-const API_URL = 'http://localhost:3000/api';
+// Base URL for the PHP API
+const API_URL = '/api';
 
 // DOM Elements
 const loginScreen = document.getElementById('login-screen');
@@ -15,18 +15,30 @@ const editorTitle = document.getElementById('editor-title');
 
 let currentPosts = [];
 
+// Helper for authenticated fetch (includes cookies)
+async function authFetch(url, options = {}) {
+    options.credentials = 'include'; // Important for PHP Sessions
+    const response = await fetch(url, options);
+    
+    if (response.status === 401 || response.status === 403) {
+        loginScreen.classList.remove('hidden');
+        dashboardScreen.classList.add('hidden');
+        dashboardScreen.classList.remove('flex');
+        throw new Error('Session expired or unauthorized');
+    }
+    return response;
+}
+
 // Check auth state on load
-function checkAuth() {
-    const token = localStorage.getItem('admin_token');
-    if (token) {
+async function checkAuth() {
+    try {
+        await authFetch(`${API_URL}/check_auth.php`);
         loginScreen.classList.add('hidden');
         dashboardScreen.classList.remove('hidden');
         dashboardScreen.classList.add('flex');
         loadPosts();
-    } else {
-        loginScreen.classList.remove('hidden');
-        dashboardScreen.classList.add('hidden');
-        dashboardScreen.classList.remove('flex');
+    } catch (e) {
+        // Not authenticated
     }
 }
 checkAuth();
@@ -38,10 +50,11 @@ loginForm.addEventListener('submit', async (e) => {
     const password = document.getElementById('password').value;
     
     try {
-        const response = await fetch(`${API_URL}/login`, {
+        const response = await fetch(`${API_URL}/login.php`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password })
+            body: JSON.stringify({ email, password }),
+            credentials: 'include' // Important for PHP Sessions
         });
         
         const data = await response.json();
@@ -50,7 +63,6 @@ loginForm.addEventListener('submit', async (e) => {
             throw new Error(data.error || 'Login failed');
         }
         
-        localStorage.setItem('admin_token', data.token);
         loginError.classList.add('hidden');
         checkAuth();
     } catch (error) {
@@ -60,34 +72,16 @@ loginForm.addEventListener('submit', async (e) => {
 });
 
 // Logout
-logoutBtn.addEventListener('click', () => {
-    localStorage.removeItem('admin_token');
+logoutBtn.addEventListener('click', async () => {
+    await fetch(`${API_URL}/logout.php`, { credentials: 'include' });
     checkAuth();
 });
-
-// Helper for authenticated fetch
-async function authFetch(url, options = {}) {
-    const token = localStorage.getItem('admin_token');
-    const headers = {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
-        ...options.headers
-    };
-    const response = await fetch(url, { ...options, headers });
-    
-    if (response.status === 401 || response.status === 403) {
-        localStorage.removeItem('admin_token');
-        checkAuth();
-        throw new Error('Session expired');
-    }
-    return response;
-}
 
 // Load Posts
 async function loadPosts() {
     postsList.innerHTML = '<div class="text-center text-sm py-4">Loading...</div>';
     try {
-        const response = await fetch(`${API_URL}/blogs`);
+        const response = await fetch(`${API_URL}/blogs.php`);
         const data = await response.json();
         
         if (!response.ok) throw new Error(data.error);
@@ -159,14 +153,16 @@ postForm.addEventListener('submit', async (e) => {
         let response;
         if (id) {
             // Update
-            response = await authFetch(`${API_URL}/blogs/${id}`, {
+            response = await authFetch(`${API_URL}/blog_single.php?id=${id}`, {
                 method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(postData)
             });
         } else {
             // Create
-            response = await authFetch(`${API_URL}/blogs`, {
+            response = await authFetch(`${API_URL}/blogs.php`, {
                 method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(postData)
             });
         }
@@ -195,7 +191,7 @@ deleteBtn.addEventListener('click', async () => {
         deleteBtn.textContent = "Deleting...";
         deleteBtn.disabled = true;
         try {
-            const response = await authFetch(`${API_URL}/blogs/${id}`, {
+            const response = await authFetch(`${API_URL}/blog_single.php?id=${id}`, {
                 method: 'DELETE'
             });
             
