@@ -1,6 +1,6 @@
 <?php
 require 'public/api/config.php';
-$stmt = $pdo->prepare("SELECT section_key, content_value FROM page_content WHERE page_slug = 'index'");
+$stmt = $pdo->prepare("SELECT section_key, content_value FROM page_content WHERE page_slug IN ('index', 'global')");
 $stmt->execute();
 $content = [];
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -8,7 +8,6 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 }
 ?>
 <!DOCTYPE html>
-
 <html class="scroll-smooth" lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -33,12 +32,12 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         theme: {
           extend: {
             colors: {
-              cream: '#FDFBF7',
-              creamdeep: '#F5F2EA',
-              ink: '#065F46',
-              inkmute: '#059669',
-              magenta: '#111111', 
-              magentadeep: '#000000',
+              cream: '<?php echo $content["color_bg"] ?? "#FDFBF7"; ?>',
+              creamdeep: '<?php echo $content["color_bg"] ?? "#F5F2EA"; ?>',
+              ink: '<?php echo $content["color_text"] ?? "#065F46"; ?>',
+              inkmute: '<?php echo $content["color_text"] ?? "#059669"; ?>',
+              magenta: '<?php echo $content["color_accent"] ?? "#111111"; ?>', 
+              magentadeep: '<?php echo $content["color_accent"] ?? "#000000"; ?>',
             },
             fontFamily: {
               serif: ['"Playfair Display"', 'serif'],

@@ -40,27 +40,39 @@ try {
         FOREIGN KEY (page_slug) REFERENCES pages(slug) ON DELETE CASCADE
     )");
 
-    // Seed Pages
-    $stmt = $pdo->query("SELECT * FROM pages");
-    if ($stmt->rowCount() == 0) {
-        $pdo->exec("INSERT INTO pages (slug, name) VALUES ('index', 'Home Page')");
-        $pdo->exec("INSERT INTO pages (slug, name) VALUES ('team', 'Team Page')");
-        $pdo->exec("INSERT INTO pages (slug, name) VALUES ('treatments', 'Treatments Page')");
+    // Seed Pages (using INSERT IGNORE so it won't duplicate if already exists)
+    $pdo->exec("INSERT IGNORE INTO pages (slug, name) VALUES ('index', 'Home Page')");
+    $pdo->exec("INSERT IGNORE INTO pages (slug, name) VALUES ('team', 'Team Page')");
+    $pdo->exec("INSERT IGNORE INTO pages (slug, name) VALUES ('treatments', 'Treatments Page')");
+    $pdo->exec("INSERT IGNORE INTO pages (slug, name) VALUES ('global', 'Global Design (Colors)')");
+    
+    // Seed default content
+    $insertContent = $pdo->prepare("INSERT IGNORE INTO page_content (page_slug, section_key, label, content_type, content_value) VALUES (?, ?, ?, ?, ?)");
+    
+    $defaults = [
+        // Index
+        ['index', 'hero_title', 'Hero Title', 'text', 'Dr. Priya <em class="font-light italic text-inkmute">Jain</em>'],
+        ['index', 'hero_subtitle', 'Hero Subtitle', 'textarea', '"We do not treat skin as a canvas for cosmetic trends. We treat it as a vital biological organ that flourishes under precision diagnosis and empathetic medical care."'],
+        ['index', 'about_text', 'About Us Text', 'textarea', 'As the visionary founder of Medshine Clinic, Dr. Priya Jain (MBBS, FFAC Fellowships) has dedicated over 15 years to advancing clinical cosmetology and aesthetic services. As a renowned Skin Specialist and Aesthetic Physician, her evidence-based philosophy emphasizes cellular skin health, precision diagnostics, and tailored non-invasive rejuvenation.'],
         
-        // Seed some default content for 'index'
-        $insertContent = $pdo->prepare("INSERT INTO page_content (page_slug, section_key, label, content_type, content_value) VALUES (?, ?, ?, ?, ?)");
-        
-        $defaultIndex = [
-            ['index', 'hero_title', 'Hero Title', 'text', 'Dr. Priya <em class="font-light italic text-inkmute">Jain</em>'],
-            ['index', 'hero_subtitle', 'Hero Subtitle', 'textarea', '"We do not treat skin as a canvas for cosmetic trends. We treat it as a vital biological organ that flourishes under precision diagnosis and empathetic medical care."'],
-            ['index', 'about_text', 'About Us Text', 'textarea', 'As the visionary founder of Medshine Clinic, Dr. Priya Jain (MBBS, FFAC Fellowships) has dedicated over 15 years to advancing clinical cosmetology and aesthetic services. As a renowned Skin Specialist and Aesthetic Physician, her evidence-based philosophy emphasizes cellular skin health, precision diagnostics, and tailored non-invasive rejuvenation.']
-        ];
+        // Global Design
+        ['global', 'color_bg', 'Background Color (Cream)', 'text', '#FDFBF7'],
+        ['global', 'color_text', 'Main Text Color (Dark Green)', 'text', '#065F46'],
+        ['global', 'color_accent', 'Accent Color (Magenta/Pink)', 'text', '#E11D48'],
 
-        foreach ($defaultIndex as $row) {
-            $insertContent->execute($row);
-        }
-        echo "Created pages and seeded default content.<br>";
+        // Team
+        ['team', 'page_title', 'Main Title', 'text', 'Our Team of Experts'],
+        ['team', 'dr_priya_bio', 'Dr. Priya Bio', 'textarea', 'Dr. Priya Jain is the visionary founder...'],
+        ['team', 'dr_ankur_bio', 'Dr. Ankur Bio', 'textarea', 'Dr. Ankur is a renowned specialist...'],
+
+        // Treatments
+        ['treatments', 'page_title', 'Main Title', 'text', 'Advanced Clinical Treatments'],
+    ];
+
+    foreach ($defaults as $row) {
+        $insertContent->execute($row);
     }
+    echo "Created pages and seeded default content.<br>";
 
     // Check if admin user exists
     $stmt = $pdo->query("SELECT * FROM users");
