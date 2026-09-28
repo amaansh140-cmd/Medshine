@@ -50,7 +50,7 @@ try {
     $insertContent = $pdo->prepare("INSERT IGNORE INTO page_content (page_slug, section_key, label, content_type, content_value) VALUES (?, ?, ?, ?, ?)");
     
     $defaults = [
-        ['index', 'hero_title', 'Hero Title', 'text', 'Dr. Priya <em class="font-light italic text-inkmute">Jain</em>'],
+        ['index', 'hero_title', 'Hero Title', 'text', 'Dr. Priya Jain'],
         ['index', 'hero_subtitle', 'Hero Subtitle', 'textarea', '"We do not treat skin as a canvas for cosmetic trends. We treat it as a vital biological organ that flourishes under precision diagnosis and empathetic medical care."'],
         ['index', 'about_text', 'About Us Text', 'textarea', 'As the visionary founder of Medshine Clinic, Dr. Priya Jain (MBBS, FFAC Fellowships) has dedicated over 15 years to advancing clinical cosmetology and aesthetic services. As a renowned Skin Specialist and Aesthetic Physician, her evidence-based philosophy emphasizes cellular skin health, precision diagnostics, and tailored non-invasive rejuvenation.'],
         ['global', 'color_bg', 'Background Color (Cream)', 'text', '#FDFBF7'],
