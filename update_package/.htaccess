@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^treatment-([a-z-]+)-([a-z0-9-]+)\.html$ treatment_single.php?cat=$1&slug=$2 [L]
+RewriteRule ^treatment-([a-z-]+)\.html$ treatment_category.php?cat=$1 [L]
