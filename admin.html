@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Medshine Clinic</title>
+    <link href="/src/style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: '#FDFBF7',
+              creamdeep: '#F5F2EA',
+              ink: '#065F46',
+              inkmute: '#059669',
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+    <!-- Login Screen -->
+    <div id="login-screen" class="min-h-screen flex items-center justify-center bg-cream/50 backdrop-blur-sm">
+        <div class="bg-white p-8 rounded-2xl shadow-xl border border-ink/10 w-full max-w-md">
+            <h2 class="text-2xl font-serif font-semibold text-center mb-6">Admin Login</h2>
+            <form id="login-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-1">Email</label>
+                    <input type="email" id="email" required class="w-full px-4 py-2 rounded-lg border border-ink/20 focus:outline-none focus:border-ink bg-transparent">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">Password</label>
+                    <input type="password" id="password" required class="w-full px-4 py-2 rounded-lg border border-ink/20 focus:outline-none focus:border-ink bg-transparent">
+                </div>
+                <div id="login-error" class="text-red-500 text-sm hidden"></div>
+                <button type="submit" class="w-full bg-ink text-white py-2 rounded-lg hover:bg-inkmute transition-colors font-medium">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard Screen -->
+    <div id="dashboard-screen" class="hidden min-h-screen flex flex-col">
+        <nav class="bg-white border-b border-ink/10 px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-serif font-semibold">Medshine Admin</h1>
+            <button id="logout-btn" class="text-sm font-medium text-red-600 hover:text-red-700">Logout</button>
+        </nav>
+
+        <main class="flex-1 p-6 max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Blog List -->
+            <div class="md:col-span-1 bg-white rounded-2xl shadow-sm border border-ink/10 p-6 flex flex-col h-[calc(100vh-120px)]">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-semibold">Blog Posts</h2>
+                    <button id="new-post-btn" class="text-sm bg-ink/10 text-ink px-3 py-1 rounded hover:bg-ink/20 transition-colors">+ New</button>
+                </div>
+                <div id="posts-list" class="flex-1 overflow-y-auto space-y-2">
+                    <!-- Posts will be injected here -->
+                    <div class="text-inkmute text-sm text-center py-4">Loading posts...</div>
+                </div>
+            </div>
+
+            <!-- Editor -->
+            <div class="md:col-span-2 bg-white rounded-2xl shadow-sm border border-ink/10 p-6 flex flex-col h-[calc(100vh-120px)] overflow-y-auto">
+                <h2 id="editor-title" class="text-lg font-semibold mb-4">Create New Post</h2>
+                <form id="post-form" class="space-y-4 flex-1 flex flex-col">
+                    <input type="hidden" id="post-id">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Title</label>
+                        <input type="text" id="post-title" required class="w-full px-4 py-2 rounded-lg border border-ink/20 focus:outline-none focus:border-ink bg-transparent">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Category</label>
+                            <input type="text" id="post-category" required placeholder="e.g. Skin Care" class="w-full px-4 py-2 rounded-lg border border-ink/20 focus:outline-none focus:border-ink bg-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Read Time</label>
+                            <input type="text" id="post-readtime" required placeholder="e.g. 5 Min Read" class="w-full px-4 py-2 rounded-lg border border-ink/20 focus:outline-none focus:border-ink bg-transparent">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Image URL</label>
+                        <input type="url" id="post-image" required placeholder="e.g. /src/assets/treatment_facial.jpg or https://..." class="w-full px-4 py-2 rounded-lg border border-ink/20 focus:outline-none focus:border-ink bg-transparent">
+                    </div>
+                    <div class="flex-1 flex flex-col">
+                        <label class="block text-sm font-medium mb-1">Content (Markdown or Plain Text)</label>
+                        <textarea id="post-content" required class="w-full flex-1 min-h-[200px] px-4 py-2 rounded-lg border border-ink/20 focus:outline-none focus:border-ink bg-transparent resize-none"></textarea>
+                    </div>
+                    <div class="flex justify-end gap-3 pt-4">
+                        <button type="button" id="delete-btn" class="hidden px-4 py-2 rounded-lg border border-red-200 text-red-600 hover:bg-red-50 transition-colors font-medium">Delete</button>
+                        <button type="submit" id="save-btn" class="bg-ink text-white px-6 py-2 rounded-lg hover:bg-inkmute transition-colors font-medium">Publish Post</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Firebase Configuration and Logic -->
+    <script type="module" src="/src/admin.js"></script>
+</body>
+</html>
