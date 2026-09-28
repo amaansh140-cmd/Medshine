@@ -155,21 +155,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 div.className = 'mb-4';
                 
                 let inputHtml = '';
+                
+                const safeValue = (field.content_value || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
                 if (field.content_type === 'textarea') {
-                    inputHtml = `<textarea id="field_${field.section_key}" data-key="${field.section_key}" class="w-full min-h-[100px] p-3 rounded-lg border border-ink/20 focus:outline-none focus:border-ink bg-transparent">${field.content_value || ''}</textarea>`;
+                    inputHtml = `<textarea id="field_${field.section_key}" data-key="${field.section_key}" class="w-full min-h-[100px] p-3 rounded-lg border border-ink/20 focus:outline-none focus:border-ink bg-transparent">${safeValue}</textarea>`;
                 } else if (field.content_type === 'image') {
                     inputHtml = `
                         <div class="flex gap-2">
-                            <input type="text" id="field_${field.section_key}" data-key="${field.section_key}" value="${field.content_value || ''}" class="flex-1 px-4 py-2 rounded-lg border border-ink/20 focus:outline-none focus:border-ink bg-transparent">
+                            <input type="text" id="field_${field.section_key}" data-key="${field.section_key}" value="${safeValue}" class="flex-1 px-4 py-2 rounded-lg border border-ink/20 focus:outline-none focus:border-ink bg-transparent">
                             <button type="button" onclick="triggerUpload('field_${field.section_key}')" class="px-4 py-2 bg-ink/10 text-ink rounded-lg font-medium hover:bg-ink/20 transition-colors">Upload</button>
                         </div>
-                        ${field.content_value ? `<img src="${field.content_value}" class="mt-2 h-20 rounded border border-ink/10 object-cover">` : ''}
+                        ${field.content_value ? `<img src="${safeValue}" class="mt-2 h-20 rounded border border-ink/10 object-cover">` : ''}
                     `;
                 } else {
-                    inputHtml = `<input type="text" id="field_${field.section_key}" data-key="${field.section_key}" value="${field.content_value || ''}" class="w-full px-4 py-2 rounded-lg border border-ink/20 focus:outline-none focus:border-ink bg-transparent">`;
+                    inputHtml = `<input type="text" id="field_${field.section_key}" data-key="${field.section_key}" value="${safeValue}" class="w-full px-4 py-2 rounded-lg border border-ink/20 focus:outline-none focus:border-ink bg-transparent">`;
                 }
-
-                div.innerHTML = `
+div.innerHTML = `
                     <label class="block text-sm font-medium mb-1">${field.label}</label>
                     ${inputHtml}
                 `;
