@@ -94,7 +94,7 @@ if (!$treatment) {
         
         <?php if($treatment['image']): ?>
         <div class="aspect-video w-full rounded-[24px] border border-ink/10 mb-12 flex items-center justify-center reveal-anim overflow-hidden">
-            <img alt="<?= htmlspecialchars($treatment['title']) ?>" class="w-full h-full object-cover reveal-fade" src="<?= htmlspecialchars($treatment['image']) ?>"/>
+            <img alt="<?= htmlspecialchars($treatment['title']) ?>" class="w-full h-full object-cover reveal-fade" src="<?= htmlspecialchars(preg_replace('/-[a-zA-Z0-9_-]+\.(jpg|jpeg|png)$/i', '.$1', $treatment['image'])) ?>"/>
         </div>
         <?php endif; ?>
         
