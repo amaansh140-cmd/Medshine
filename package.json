@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp index.php team.php treatments.php dist/ && cp -r api dist/",
     "preview": "vite preview"
   },
   "devDependencies": {
