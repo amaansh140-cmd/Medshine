@@ -134,7 +134,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <div class="border border-ink/10 rounded-[28px] p-8 md:p-10 bg-ink/5 flex flex-col justify-between relative overflow-hidden group reveal-anim">
 <div>
 <div class="flex items-center gap-4 mb-6">
-<img alt="Dr. Ankur Jain" class="w-16 h-16 rounded-full object-cover object-top border-2 border-ink/15 shadow-md flex-shrink-0 reveal-fade" src="/assets/dr_ankur_portrait-DkLs7Oa7.jpg"/>
+<img alt="Dr. Ankur Jain" class="w-16 h-16 rounded-full object-cover object-top border-2 border-ink/15 shadow-md flex-shrink-0 reveal-fade" src="/assets/dr_ankur_portrait.jpg"/>
 <div>
 <h3 class="font-serif font-semibold text-2xl text-ink reveal-anim">Dr. Ankur Jain</h3>
 <p class="text-xs uppercase tracking-widest text-inkmute mt-1">Internal Medicine &amp; Critical Care Specialist</p>

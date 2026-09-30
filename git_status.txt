@@ -1,0 +1,22 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   public/api/treatments.json
+	deleted:    src/assets/treatment_face_prp_indian.jpeg
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	fix_json_only.py
+	fix_treatment_images.py
+	git_status.txt
+	public/treatment_face_prp_indian.jpeg
+	public/treatment_hair_prp.jpg
+
+
+It took 6.15 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+no changes added to commit (use "git add" and/or "git commit -a")
