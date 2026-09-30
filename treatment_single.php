@@ -49,8 +49,8 @@ if (!$treatment) {
       }
     </script>
     <style>
-      .reveal-anim { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
-      .reveal-anim.active { opacity: 1; transform: translateY(0); }
+      . { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+      ..active { opacity: 1; transform: translateY(0); }
       .hover-scale { transition: transform 0.3s ease; }
       .hover-scale:hover { transform: scale(1.02); }
     </style>
@@ -77,7 +77,7 @@ if (!$treatment) {
 </nav>
 
 <main class="max-w-[1240px] mx-auto px-6 md:px-10 pb-20 md:pb-32">
-    <div class="flex items-center gap-2 text-sm font-medium text-inkmute mb-8 reveal-anim reveal-fade">
+    <div class="flex items-center gap-2 text-sm font-medium text-inkmute mb-8  ">
         <a class="hover:text-ink transition-colors" href="index.php">Home</a>
         <svg fill="currentColor" height="14" viewbox="0 0 256 256" width="14" xmlns="http://www.w3.org/2000/svg"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
         <a class="hover:text-ink transition-colors" href="treatments.php">Treatments</a>
@@ -88,21 +88,21 @@ if (!$treatment) {
     </div>
 
     <div class="max-w-[800px]">
-        <h1 class="font-serif font-medium leading-[0.95] tracking-tight text-ink mb-10 reveal-anim reveal-fade" style="font-size: clamp(2.4rem, 5vw, 4.2rem);">
+        <h1 class="font-serif font-medium leading-[0.95] tracking-tight text-ink mb-10  " style="font-size: clamp(2.4rem, 5vw, 4.2rem);">
             <?= htmlspecialchars($treatment['title']) ?>
         </h1>
         
         <?php if($treatment['image']): ?>
-        <div class="aspect-video w-full rounded-[24px] border border-ink/10 mb-12 flex items-center justify-center reveal-anim overflow-hidden">
-            <img alt="<?= htmlspecialchars($treatment['title']) ?>" class="w-full h-full object-cover reveal-fade" src="<?= htmlspecialchars(preg_replace('/-[a-zA-Z0-9_-]+\.(jpg|jpeg|png)$/i', '.$1', $treatment['image'])) ?>"/>
+        <div class="aspect-video w-full rounded-[24px] border border-ink/10 mb-12 flex items-center justify-center  overflow-hidden">
+            <img alt="<?= htmlspecialchars($treatment['title']) ?>" class="w-full h-full object-cover " src="<?= htmlspecialchars(preg_replace('/-[a-zA-Z0-9_-]+\.(jpg|jpeg|png)$/i', '.$1', $treatment['image'])) ?>"/>
         </div>
         <?php endif; ?>
         
-        <p class="text-[17px] md:text-[19px] text-inkmute leading-relaxed font-light reveal-anim">
+        <p class="text-[17px] md:text-[19px] text-inkmute leading-relaxed font-light ">
             <?= nl2br(htmlspecialchars($treatment['description'])) ?>
         </p>
         
-        <div class="mt-10 reveal-anim">
+        <div class="mt-10 ">
             <a class="inline-flex items-center justify-center bg-ink text-cream px-8 py-4 rounded-full font-medium hover:bg-black transition-colors hover-scale" href="contact.html">
               Book Appointment
             </a>
@@ -112,7 +112,7 @@ if (!$treatment) {
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-    const reveals = document.querySelectorAll('.reveal-anim');
+    const reveals = document.querySelectorAll('.');
     reveals.forEach((el, index) => {
         setTimeout(() => {
             el.classList.add('active');

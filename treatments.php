@@ -72,7 +72,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <!-- Sticky Nav -->
 <nav class="fixed top-0 left-0 right-0 z-50 bg-cream/85 backdrop-blur-md border-b border-ink/10">
 <div class="max-w-[1240px] mx-auto px-6 md:px-10 h-[68px] flex items-center justify-between">
-<a class="flex items-center gap-3 reveal-anim" href="/">
+<a class="flex items-center gap-3 " href="/">
 <div class="w-7 h-7 rounded-full bg-ink flex items-center justify-center text-cream">
 <svg fill="currentColor" height="16" viewbox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm43.81,68.19-28.28,66a8,8,0,0,1-3.72,3.72l-66,28.28a8,8,0,0,1-10.36-10.36l28.28-66a8,8,0,0,1,3.72-3.72l66-28.28A8,8,0,0,1,171.81,92.19ZM128,112a16,16,0,1,0,16,16A16,16,0,0,0,128,112Z"></path></svg>
 </div>
@@ -89,39 +89,39 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 </nav>
 <section class="max-w-[1240px] mx-auto px-6 md:px-10 pt-32 pb-16">
 <div class="flex items-center gap-4 mb-8">
-<span class="text-ink uppercase text-xs tracking-[0.28em] font-semibold reveal-anim">Our Services</span>
-<div class="flex-1 h-px bg-ink/15 reveal-anim"></div>
+<span class="text-ink uppercase text-xs tracking-[0.28em] font-semibold ">Our Services</span>
+<div class="flex-1 h-px bg-ink/15 "></div>
 </div>
-<h1 class="font-serif font-medium leading-[0.95] tracking-tight text-ink max-w-[14ch] mb-8 reveal-anim reveal-fade" style="font-size: clamp(2.7rem, 8.5vw, 6.4rem);">
+<h1 class="font-serif font-medium leading-[0.95] tracking-tight text-ink max-w-[14ch] mb-8  " style="font-size: clamp(2.7rem, 8.5vw, 6.4rem);">
             <?php echo $content['page_title'] ?? 'Specialized Treatments'; ?>
           </h1>
-<p class="text-[17px] md:text-[19px] text-inkmute max-w-[46ch] leading-relaxed mb-16 font-light reveal-anim">
+<p class="text-[17px] md:text-[19px] text-inkmute max-w-[46ch] leading-relaxed mb-16 font-light ">
             Select a category below to explore the professional medical, clinical cosmetology, and aesthetic services offered by Dr. Priya Jain.
           </p>
 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 grid-flow-dense auto-rows-auto md:auto-rows-[220px] stagger-group">
-<a class="md:col-span-2 md:row-span-2 lg:col-span-2 lg:row-span-2 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group reveal-anim hover-scale" href="treatment_category.php?cat=skin">
-<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 reveal-anim">Skin</h3>
+<a class="md:col-span-2 md:row-span-2 lg:col-span-2 lg:row-span-2 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group  hover-scale" href="treatment_category.php?cat=skin">
+<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 ">Skin</h3>
 </a>
-<a class="md:col-span-1 md:row-span-2 lg:col-span-1 lg:row-span-2 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group reveal-anim hover-scale" href="treatment_category.php?cat=medical">
-<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 reveal-anim">Medical</h3>
+<a class="md:col-span-1 md:row-span-2 lg:col-span-1 lg:row-span-2 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group  hover-scale" href="treatment_category.php?cat=medical">
+<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 ">Medical</h3>
 </a>
-<a class="md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group reveal-anim hover-scale" href="treatment_category.php?cat=hair">
-<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 reveal-anim">Hair</h3>
+<a class="md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group  hover-scale" href="treatment_category.php?cat=hair">
+<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 ">Hair</h3>
 </a>
-<a class="md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group reveal-anim hover-scale" href="treatment_category.php?cat=laser">
-<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 reveal-anim">Laser</h3>
+<a class="md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group  hover-scale" href="treatment_category.php?cat=laser">
+<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 ">Laser</h3>
 </a>
-<a class="md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group reveal-anim hover-scale" href="treatment_category.php?cat=injectables">
-<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 reveal-anim">Injectables</h3>
+<a class="md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group  hover-scale" href="treatment_category.php?cat=injectables">
+<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 ">Injectables</h3>
 </a>
-<a class="md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group reveal-anim hover-scale" href="treatment_category.php?cat=bridal">
-<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 reveal-anim">Bridal Packages</h3>
+<a class="md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group  hover-scale" href="treatment_category.php?cat=bridal">
+<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 ">Bridal Packages</h3>
 </a>
-<a class="md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group reveal-anim hover-scale" href="treatment_category.php?cat=non-surgical">
-<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 reveal-anim">Non Surgical</h3>
+<a class="md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group  hover-scale" href="treatment_category.php?cat=non-surgical">
+<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 ">Non Surgical</h3>
 </a>
-<a class="md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group reveal-anim hover-scale" href="treatment_category.php?cat=regenerative">
-<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 reveal-anim">Regenerative Medicines</h3>
+<a class="md:col-span-2 md:row-span-1 lg:col-span-2 lg:row-span-1 border border-ink/10 bg-ink/5 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-[24px] transition-colors flex flex-col justify-center items-center text-center relative overflow-hidden group  hover-scale" href="treatment_category.php?cat=regenerative">
+<h3 class="font-serif font-semibold text-3xl md:text-4xl text-ink relative z-10 ">Regenerative Medicines</h3>
 </a>
 </div>
 </section>
@@ -141,7 +141,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <div class="max-w-[1240px] mx-auto px-6 md:px-10 pt-12 md:pt-24 pb-8 md:pb-10">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8 mb-10 md:mb-16 relative z-10 stagger-group">
 <!-- Brand Column -->
-<div class="md:col-span-4 lg:col-span-4 reveal-anim">
+<div class="md:col-span-4 lg:col-span-4 ">
 <a class="flex items-center gap-3 mb-6" href="/">
 <div class="w-8 h-8 rounded-full bg-ink flex items-center justify-center text-cream">
 <svg fill="currentColor" height="18" viewbox="0 0 256 256" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm43.81,68.19-28.28,66a8,8,0,0,1-3.72,3.72l-66,28.28a8,8,0,0,1-10.36-10.36l28.28-66a8,8,0,0,1,3.72-3.72l66-28.28A8,8,0,0,1,171.81,92.19ZM128,112a16,16,0,1,0,16,16A16,16,0,0,0,128,112Z"></path></svg>
@@ -165,7 +165,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 </div>
 </div>
 <!-- Main Treatments -->
-<div class="md:col-span-3 lg:col-span-3 reveal-anim">
+<div class="md:col-span-3 lg:col-span-3 ">
 <h4 class="font-serif font-semibold text-ink text-lg mb-6">Main Treatments</h4>
 <ul class="space-y-3 text-sm text-inkmute">
 <li><a class="hover:text-ink transition-colors" href="treatments.php">Laser Hair Reduction</a></li>
@@ -176,7 +176,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 </ul>
 </div>
 <!-- Quick Links -->
-<div class="md:col-span-2 lg:col-span-2 reveal-anim">
+<div class="md:col-span-2 lg:col-span-2 ">
 <h4 class="font-serif font-semibold text-ink text-lg mb-6">Explore</h4>
 <ul class="space-y-3 text-sm text-inkmute">
 <li><a class="hover:text-ink transition-colors" href="dr-ankur.html">Our Team</a></li>
@@ -186,7 +186,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 </ul>
 </div>
 <!-- Contact Info -->
-<div class="md:col-span-3 lg:col-span-3 reveal-anim">
+<div class="md:col-span-3 lg:col-span-3 ">
 <h4 class="font-serif font-semibold text-ink text-lg mb-6">Contact Us</h4>
 <ul class="space-y-4 text-sm text-inkmute">
 <li class="flex gap-3">
