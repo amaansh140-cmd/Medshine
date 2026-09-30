@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 .vercel
 website_production.zip
+
+*.zip
