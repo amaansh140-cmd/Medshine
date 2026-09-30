@@ -18,11 +18,11 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <meta content="Team | Medshine Clinic - Advanced Skin &amp; Hair Care in Mumbai" property="og:title"/>
 <meta content="Learn more about Team at Medshine Clinic, Mumbai. Dr. Priya Jain offers advanced, evidence-based clinical cosmetology and aesthetic treatments." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="https://medshineclinic.comassets/dr_priya_portrait_pink.jpg" property="og:image"/>
+<meta content="https://medshineclinic.com/assets/dr_priya_portrait_pink.jpg" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Team | Medshine Clinic - Advanced Skin &amp; Hair Care in Mumbai" name="twitter:title"/>
 <meta content="Learn more about Team at Medshine Clinic, Mumbai. Dr. Priya Jain offers advanced, evidence-based clinical cosmetology and aesthetic treatments." name="twitter:description"/>
-<meta content="https://medshineclinic.comassets/dr_priya_portrait_pink.jpg" name="twitter:image"/>
+<meta content="https://medshineclinic.com/assets/dr_priya_portrait_pink.jpg" name="twitter:image"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>

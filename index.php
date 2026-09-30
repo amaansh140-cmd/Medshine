@@ -18,11 +18,11 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <meta content="Dr. Priya Jain | Best Skin Specialist &amp; Aesthetic Physician in Mumbai | Medshine Clinic" property="og:title"/>
 <meta content="Medshine Clinic in Mumbai by Dr. Priya Jain offers advanced laser rejuvenation, clinical acne scar revision, anti-aging contouring, and regenerative cellular therapies." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="https://medshineclinic.comassets/dr_priya_portrait_pink.jpg" property="og:image"/>
+<meta content="https://medshineclinic.com/assets/dr_priya_portrait_pink.jpg" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Dr. Priya Jain | Best Skin Specialist &amp; Aesthetic Physician in Mumbai | Medshine Clinic" name="twitter:title"/>
 <meta content="Medshine Clinic in Mumbai by Dr. Priya Jain offers advanced laser rejuvenation, clinical acne scar revision, anti-aging contouring, and regenerative cellular therapies." name="twitter:description"/>
-<meta content="https://medshineclinic.comassets/dr_priya_portrait_pink.jpg" name="twitter:image"/>
+<meta content="https://medshineclinic.com/assets/dr_priya_portrait_pink.jpg" name="twitter:image"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -96,8 +96,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <div class="md:col-span-5 reveal-anim">
 <div class="relative rounded-[32px] overflow-hidden aspect-[4/5] bg-ink/5 border border-ink/10 shadow-xl">
 <picture>
-<source media="(max-width: 767px)" srcset="/assets/dr_priya_mobile_hero-BTwAxTqY.jpg"/>
-<img alt="Dr. Priya Jain" class="w-full h-full object-cover contrast-105 reveal-fade" src="/assets/dr_priya_portrait_pink-Ci1VF3c0.jpg"/>
+<source media="(max-width: 767px)" srcset="/assets/dr_priya_mobile_hero.jpg"/>
+<img alt="Dr. Priya Jain" class="w-full h-full object-cover contrast-105 reveal-fade" src="/assets/dr_priya_portrait_pink.jpg"/>
 </picture>
 <div class="absolute bottom-4 left-4 right-4 bg-cream/90 backdrop-blur-md p-4 rounded-2xl border border-ink/10 animate-float">
 <span class="text-xs uppercase tracking-widest text-ink font-semibold block">MBBS, FFAC (Fellowships)</span>
@@ -138,7 +138,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 </div>
 <!-- Slide 2 -->
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-<img alt="Laser Machine" class="w-full h-full object-cover" src="/assets/laser-machine-BDMEq5QD.jpg"/>
+<img alt="Laser Machine" class="w-full h-full object-cover" src="/laser-machine.jpg"/>
 </div>
 <!-- Slide 3 -->
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
@@ -161,7 +161,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <img alt="Clinic Interior" class="w-full h-full object-cover" src="/clinic-room.jpg"/>
 </div>
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-<img alt="Laser Machine" class="w-full h-full object-cover" src="/assets/laser-machine-BDMEq5QD.jpg"/>
+<img alt="Laser Machine" class="w-full h-full object-cover" src="/laser-machine.jpg"/>
 </div>
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
 <img alt="Product Shelf" class="w-full h-full object-cover" src="/product-shelf.jpg"/>
