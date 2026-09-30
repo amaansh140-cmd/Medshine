@@ -134,7 +134,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <div class="flex gap-4 md:gap-6 pr-4 md:pr-6 flex-none items-center" id="smooth-slider-track" style="will-change: transform;">
 <!-- Slide 1 -->
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-<img alt="Clinic Interior" class="w-full h-full object-cover" src="/assets/clinic-room-DT-0E_O2.jpg"/>
+<img alt="Clinic Interior" class="w-full h-full object-cover" src="/clinic-room.jpg"/>
 </div>
 <!-- Slide 2 -->
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
@@ -142,38 +142,38 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 </div>
 <!-- Slide 3 -->
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-<img alt="Product Shelf" class="w-full h-full object-cover" src="/assets/product-shelf-BtkKn5Gz.jpg"/>
+<img alt="Product Shelf" class="w-full h-full object-cover" src="/product-shelf.jpg"/>
 </div>
 <!-- Slide 4 -->
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-<img alt="Face Exam" class="w-full h-full object-cover" src="/assets/face-exam-DWbZtlmp.PNG"/>
+<img alt="Face Exam" class="w-full h-full object-cover" src="/face-exam.PNG"/>
 </div>
 <!-- Slide 5 -->
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-<img alt="Hair Treatment" class="w-full h-full object-cover" src="/assets/hair-treatment-swOo_HRQ.PNG"/>
+<img alt="Hair Treatment" class="w-full h-full object-cover" src="/hair-treatment.PNG"/>
 </div>
 <!-- Slide 6 -->
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-<img alt="Consultation" class="w-full h-full object-cover" src="/assets/desk-consult-BXHCdwC3.PNG"/>
+<img alt="Consultation" class="w-full h-full object-cover" src="/desk-consult.PNG"/>
 </div>
 <!-- Duplicates for seamless loop -->
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-<img alt="Clinic Interior" class="w-full h-full object-cover" src="/assets/clinic-room-DT-0E_O2.jpg"/>
+<img alt="Clinic Interior" class="w-full h-full object-cover" src="/clinic-room.jpg"/>
 </div>
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
 <img alt="Laser Machine" class="w-full h-full object-cover" src="/assets/laser-machine-BDMEq5QD.jpg"/>
 </div>
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-<img alt="Product Shelf" class="w-full h-full object-cover" src="/assets/product-shelf-BtkKn5Gz.jpg"/>
+<img alt="Product Shelf" class="w-full h-full object-cover" src="/product-shelf.jpg"/>
 </div>
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-<img alt="Face Exam" class="w-full h-full object-cover" src="/assets/face-exam-DWbZtlmp.PNG"/>
+<img alt="Face Exam" class="w-full h-full object-cover" src="/face-exam.PNG"/>
 </div>
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-<img alt="Hair Treatment" class="w-full h-full object-cover" src="/assets/hair-treatment-swOo_HRQ.PNG"/>
+<img alt="Hair Treatment" class="w-full h-full object-cover" src="/hair-treatment.PNG"/>
 </div>
 <div class="w-[200px] md:w-[240px] h-[320px] md:h-[420px] flex-none bg-ink/5 rounded-[16px] overflow-hidden shadow-sm border border-ink/10">
-<img alt="Consultation" class="w-full h-full object-cover" src="/assets/desk-consult-BXHCdwC3.PNG"/>
+<img alt="Consultation" class="w-full h-full object-cover" src="/desk-consult.PNG"/>
 </div>
 </div>
 </div>
