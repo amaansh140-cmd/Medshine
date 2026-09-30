@@ -83,8 +83,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <span class="font-serif font-semibold tracking-tight text-xl text-ink">Medshine</span>
 </a>
 <div class="hidden md:flex items-center gap-8 text-sm text-inkmute" id="desktop-nav">
-<a class="hover:text-ink transition-colors nav-link" href="team.html">Team</a>
-<a class="hover:text-ink transition-colors nav-link" href="treatments.html">Treatments</a>
+<a class="hover:text-ink transition-colors nav-link" href="team.php">Team</a>
+<a class="hover:text-ink transition-colors nav-link" href="treatments.php">Treatments</a>
 <a class="hover:text-ink transition-colors nav-link" href="blog.html">Blogs</a>
 <a class="hover:text-ink transition-colors nav-link" href="results.html">Results</a>
 <a class="hover:text-ink transition-colors nav-link" href="contact.html">Contact</a>
@@ -101,7 +101,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <h1 class="font-serif font-medium leading-[0.95] tracking-tight text-ink max-w-[15ch] mb-8 reveal-anim reveal-fade" style="font-size: clamp(2.7rem, 8.5vw, 7.8rem);"><?php echo $content['page_title'] ?? 'Our Dedicated <em class="font-light italic text-inkmute">Team</em>'; ?></h1>
 <p class="text-[17px] md:text-[19px] text-inkmute max-w-[48ch] leading-relaxed mb-10 font-light reveal-anim">Meet the experienced medical professionals dedicated to your clinical health and aesthetic care.</p>
 <div class="flex flex-wrap items-center gap-4">
-<a class="bg-magenta text-cream px-8 py-4 rounded-full font-medium hover:bg-magentadeep transition-colors flex items-center gap-2 hover-scale" href="treatments.html">
+<a class="bg-magenta text-cream px-8 py-4 rounded-full font-medium hover:bg-magentadeep transition-colors flex items-center gap-2 hover-scale" href="treatments.php">
               Explore Our Treatments
               <svg fill="currentColor" height="16" viewbox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path class="reveal-anim" d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
 </a>
@@ -193,11 +193,11 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <div class="md:col-span-3 lg:col-span-3 reveal-anim">
 <h4 class="font-serif font-semibold text-ink text-lg mb-6">Main Treatments</h4>
 <ul class="space-y-3 text-sm text-inkmute">
-<li><a class="hover:text-ink transition-colors" href="treatments.html">Laser Hair Reduction</a></li>
-<li><a class="hover:text-ink transition-colors" href="treatments.html">Acne &amp; Scar Treatments</a></li>
-<li><a class="hover:text-ink transition-colors" href="treatments.html">Anti-Aging &amp; Injectables</a></li>
-<li><a class="hover:text-ink transition-colors" href="treatments.html">Regenerative Medicine</a></li>
-<li><a class="hover:text-ink transition-colors" href="treatments.html">Hair Restoration</a></li>
+<li><a class="hover:text-ink transition-colors" href="treatments.php">Laser Hair Reduction</a></li>
+<li><a class="hover:text-ink transition-colors" href="treatments.php">Acne &amp; Scar Treatments</a></li>
+<li><a class="hover:text-ink transition-colors" href="treatments.php">Anti-Aging &amp; Injectables</a></li>
+<li><a class="hover:text-ink transition-colors" href="treatments.php">Regenerative Medicine</a></li>
+<li><a class="hover:text-ink transition-colors" href="treatments.php">Hair Restoration</a></li>
 </ul>
 </div>
 <!-- Quick Links -->
@@ -205,7 +205,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <h4 class="font-serif font-semibold text-ink text-lg mb-6">Explore</h4>
 <ul class="space-y-3 text-sm text-inkmute">
 <li><a class="hover:text-ink transition-colors" href="dr-ankur.html">Our Team</a></li>
-<li><a class="hover:text-ink transition-colors" href="treatments.html">All Services</a></li>
+<li><a class="hover:text-ink transition-colors" href="treatments.php">All Services</a></li>
 <li><a class="hover:text-ink transition-colors" href="blog.html">Health Blog</a></li>
 <li><a class="hover:text-ink transition-colors" href="contact.html">Book Online</a></li>
 </ul>
